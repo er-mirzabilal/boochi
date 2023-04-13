@@ -2,7 +2,7 @@ import { Box, Typography } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { useEffect } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const useStyles = makeStyles((theme) => ({
   root: (props) => ({
@@ -14,6 +14,36 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const SectionFourGIF = (props: any) => {
+  // for ClickAblepanda
+  const [srcPanda, setSrPanda] = useState<string>(
+    "images/Animations/Pand0_IDLEa.gif"
+  );
+
+  const [tempSrcPanda, setTempSrcPanda] = useState<string>();
+
+  const gifRefPanda = useRef<HTMLImageElement>(null);
+
+  function handleClickPnada(): void {
+    setTempSrcPanda("/images/Animations/Pand0_CLICKABLEa.gif");
+    setTimeout(() => {
+      setTempSrcPanda("");
+    }, 1200);
+  }
+  // for ClickAbleworker
+  const [srcWorker, setSrcWorker] = useState<string>(
+    "/images/Animations/Boo3ConstructionBoo_IDLE.gif"
+  );
+
+  const [tempSrcWorker, setTempSrcWorker] = useState<string>();
+
+  const gifRefWorker = useRef<HTMLImageElement>(null);
+
+  function handleClickWorker(): void {
+    setTempSrcWorker("images/Animations/Boo3ConstructionBoo_CLICKABLE.gif");
+    setTimeout(() => {
+      setTempSrcWorker("");
+    }, 1800);
+  }
   const classes = useStyles();
   const controls1 = useAnimation();
   const { ref: ref1, inView: inView1 } = useInView({
@@ -39,8 +69,8 @@ const SectionFourGIF = (props: any) => {
         initial={{ opacity: 0 }}
       >
         <img
-          onClick={() => props.setShowSections("sectionFive")}
-          src="/images/Animations/Pand0_CLICKABLEa.gif"
+          ref={gifRefPanda}
+          src={tempSrcPanda || srcPanda}
           alt="My GIF"
           width={"7%"}
           style={{
@@ -52,10 +82,11 @@ const SectionFourGIF = (props: any) => {
             cursor: "pointer",
             zIndex: 2,
           }}
+          onClick={handleClickPnada}
         />
         <img
-          onClick={() => props.setShowSections("sectionFive")}
-          src="/images/Animations/Boo3ConstructionBoo_CLICKABLE.gif"
+          ref={gifRefWorker}
+          src={tempSrcWorker || srcWorker}
           alt="My GIF"
           width={"7%"}
           style={{
@@ -67,6 +98,7 @@ const SectionFourGIF = (props: any) => {
             cursor: "pointer",
             zIndex: 2,
           }}
+          onClick={handleClickWorker}
         />
       </motion.div>
     </motion.div>

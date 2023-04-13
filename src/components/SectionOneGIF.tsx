@@ -2,7 +2,7 @@ import { Box, Typography } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { useEffect } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const useStyles = makeStyles((theme) => ({
   root: (props) => ({
@@ -14,10 +14,23 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const SectionOneGIF = (props: any) => {
+  const [src, setSrc] = useState<string>(
+    "images/Animations/booreAndMonster.gif"
+  );
+  const [tempSrc, setTempSrc] = useState<string>("");
+
+  const gifRef = useRef<HTMLImageElement>(null);
+
+  function handleClick(): void {
+    setTempSrc("images/Animations/banner - CLICKABLE.gif");
+    setTimeout(() => {
+      setTempSrc("");
+    }, 2000);
+  }
   const classes = useStyles();
   const controls1 = useAnimation();
   const { ref: ref1, inView: inView1 } = useInView({
-    threshold: 0.9,
+    // threshold: 0.9,
     // triggerOnce: true,
   });
 
@@ -25,7 +38,7 @@ const SectionOneGIF = (props: any) => {
     if (inView1) {
       controls1.start({
         opacity: 1,
-        transition: { duration: 1, delay: 0.2 },
+        transition: { duration: 1, delay: 0.5 },
       });
     }
   }, [controls1, inView1]);
@@ -39,33 +52,19 @@ const SectionOneGIF = (props: any) => {
         initial={{ opacity: 0 }}
       >
         <img
-          onClick={() => props.setShowSections("sectionTwo")}
-          src="images/Animations/Boores_IDLE.gif"
+          ref={gifRef}
+          src={tempSrc || src}
           alt="My GIF"
-          width={"9%"}
+          width="50%"
           style={{
             position: "absolute",
-            top: "89.5%",
-            left: "45.5%",
+            top: "83.5%",
+            left: "53.5%",
             transform: "translate(-50%, -50%)",
             cursor: "pointer",
             zIndex: 2,
           }}
-        />
-        <img
-          onClick={() => props.setShowSections("sectionTwo")}
-          src="images/Animations/Monster.gif"
-          alt="My GIF"
-          width={"20%"}
-          style={{
-            position: "absolute",
-            top: "81.5%",
-            left: "55.5%",
-            transform: "translate(-50%, -50%)",
-
-            cursor: "pointer",
-            zIndex: 2,
-          }}
+          onClick={handleClick}
         />
       </motion.div>
     </motion.div>

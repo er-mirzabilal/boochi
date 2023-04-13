@@ -2,7 +2,7 @@ import { Box, Typography } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { useEffect } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const useStyles = makeStyles((theme) => ({
   root: (props) => ({
@@ -14,10 +14,23 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const SectionThreeGIF = (props: any) => {
+  const [src, setSrc] = useState<string>(
+    "/images/Animations/BooWizard_IDLE .gif"
+  );
+  const [tempSrc, setTempSrc] = useState<string>("");
+
+  const gifRef = useRef<HTMLImageElement>(null);
+
+  function handleClick(): void {
+    setTempSrc("images/Animations/BooWizard_CLICKABLE .gif");
+    setTimeout(() => {
+      setTempSrc("");
+    }, 1200);
+  }
   const classes = useStyles();
   const controls1 = useAnimation();
   const { ref: ref1, inView: inView1 } = useInView({
-    threshold: 0.9,
+    // threshold: 0.9,
     // triggerOnce: true,
   });
 
@@ -25,7 +38,7 @@ const SectionThreeGIF = (props: any) => {
     if (inView1) {
       controls1.start({
         opacity: 1,
-        transition: { duration: 1, delay: 0.2 },
+        transition: { duration: 1, delay: 0.5 },
       });
     }
   }, [controls1, inView1]);
@@ -39,8 +52,8 @@ const SectionThreeGIF = (props: any) => {
         initial={{ opacity: 0 }}
       >
         <img
-          onClick={() => props.setShowSections("sectionFour")}
-          src="/images/Animations/BooWizard_IDLE .gif"
+          ref={gifRef}
+          src={tempSrc || src}
           alt="My GIF"
           width={"6%"}
           style={{
@@ -52,6 +65,7 @@ const SectionThreeGIF = (props: any) => {
             cursor: "pointer",
             zIndex: 2,
           }}
+          onClick={handleClick}
         />
       </motion.div>
     </motion.div>
