@@ -15,7 +15,7 @@ const Boochi = () => {
       {showSections === "sectionOne" && (
         <Box
           sx={{
-            width: { lg: "87.3vw", miniMObile: "100vw" },
+            width: { lg: "100vw", miniMObile: "100vw" },
             height: "100vh",
             margin: { lg: "auto", miniMobile: "0px" },
             transition: "transform 0.5s ease-out",
@@ -77,7 +77,7 @@ const Boochi = () => {
       {showSections === "sectionTwo" && (
         <Box
           sx={{
-            width: { lg: "87.3vw", miniMObile: "100vw" },
+            width: { lg: "100vw", miniMObile: "100vw" },
             height: "100vh",
             margin: { lg: "auto", miniMobile: "0px" },
             transition: "transform 0.5s ease-out",
@@ -92,7 +92,10 @@ const Boochi = () => {
               position: "relative",
             }}
           >
-            <Box sx={{ position: "absolute" }}>
+            <Box
+              onClick={() => setShowSections("sectionThree")}
+              sx={{ position: "absolute", zIndex: 2 }}
+            >
               <img
                 src="/images/Section2/ThroneRoomGodRays.png"
                 alt="My image"
@@ -114,10 +117,7 @@ const Boochi = () => {
               />
             </Box>
 
-            <Box
-              onClick={() => setShowSections("sectionThree")}
-              sx={{ position: "absolute" }}
-            >
+            <Box sx={{ position: "absolute" }}>
               <img
                 src="/images/Section2/ThroneRoomBackgroundLight.png"
                 alt="My image"
@@ -136,7 +136,7 @@ const Boochi = () => {
       {showSections === "sectionThree" && (
         <Box
           sx={{
-            width: { lg: "87.3vw", miniMObile: "100vw" },
+            width: { lg: "100vw", miniMObile: "100vw" },
             height: "100vh",
             margin: { lg: "auto", miniMobile: "0px" },
             transition: "transform 0.5s ease-out",
@@ -180,7 +180,7 @@ const Boochi = () => {
       {showSections === "sectionFour" && (
         <Box
           sx={{
-            width: { lg: "87.3vw", miniMObile: "100vw" },
+            width: { lg: "100vw", miniMObile: "100vw" },
             height: "100vh",
             margin: { lg: "auto", miniMobile: "0px" },
             transition: "transform 0.5s ease-out",
@@ -223,7 +223,7 @@ const Boochi = () => {
       {showSections === "sectionFive" && (
         <Box
           sx={{
-            width: { lg: "87.3vw", miniMObile: "100vw" },
+            width: { lg: "100vw", miniMObile: "100vw" },
             height: "100vh",
             margin: { lg: "auto", miniMobile: "0px" },
             transition: "transform 0.5s ease-out",

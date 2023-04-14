@@ -60,7 +60,7 @@ const SectionTwoGIF = (props: any) => {
   const classes = useStyles();
   const controls1 = useAnimation();
   const { ref: ref1, inView: inView1 } = useInView({
-    // threshold: 0.1,
+    threshold: 0.2,
     // triggerOnce: true,
   });
 

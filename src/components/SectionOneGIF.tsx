@@ -30,7 +30,7 @@ const SectionOneGIF = (props: any) => {
   const classes = useStyles();
   const controls1 = useAnimation();
   const { ref: ref1, inView: inView1 } = useInView({
-    // threshold: 0.9,
+    threshold: 0.5,
     // triggerOnce: true,
   });
 
