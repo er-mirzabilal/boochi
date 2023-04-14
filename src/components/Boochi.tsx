@@ -7,6 +7,19 @@ import SectionFourGIF from "./SectionFourGIF";
 
 const Boochi = () => {
   const [showSections, setShowSections] = useState("sectionOne");
+  const [src, setSrc] = useState<string>(
+    "images/Animations/booreAndMonster.gif"
+  );
+  const [tempSrc, setTempSrc] = useState<string>("");
+
+  const gifRef = useRef<HTMLImageElement>(null);
+
+  function handleClick(): void {
+    setTempSrc("images/Animations/banner - CLICKABLE.gif");
+    setTimeout(() => {
+      setTempSrc("");
+    }, 2000);
+  }
 
   return (
     <Box>
@@ -63,7 +76,23 @@ const Boochi = () => {
                 alt="My image"
                 style={{ maxWidth: "100%" }}
               />
-              <SectionOneGIF />
+              {/* <SectionOneGIF /> */}
+
+              <img
+                ref={gifRef}
+                src={tempSrc || src}
+                alt="My GIF"
+                width="50%"
+                style={{
+                  position: "absolute",
+                  top: "83.5%",
+                  left: "53.5%",
+                  transform: "translate(-50%, -50%)",
+                  cursor: "pointer",
+                  zIndex: 2,
+                }}
+                onClick={handleClick}
+              />
             </Box>
           </Box>
         )}
@@ -124,20 +153,16 @@ const Boochi = () => {
       </Box>
 
       {/* Sectoin Three */}
-
-      {showSections === "sectionThree" && (
-        <Box
-          sx={{
-            width: { lg: "100vw", miniMObile: "100vw" },
-            height: "100vh",
-            margin: { lg: "auto", miniMobile: "0px" },
-            transition: "transform 0.5s ease-out",
-            transform:
-              showSections === "sectionThree"
-                ? "translateX(0)"
-                : "translateX(100%)",
-          }}
-        >
+      <Box
+        style={{
+          transition: "transform 0.5s ease-out",
+          transform:
+            showSections === "sectionThree"
+              ? "translateX(0)"
+              : "translateX(100%)",
+        }}
+      >
+        {showSections === "sectionThree" && (
           <Box
             sx={{
               position: "relative",
@@ -164,24 +189,20 @@ const Boochi = () => {
               <SectionThreeGIF />
             </Box>
           </Box>
-        </Box>
-      )}
+        )}{" "}
+      </Box>
 
       {/* Sectoin Four */}
-
-      {showSections === "sectionFour" && (
-        <Box
-          sx={{
-            width: { lg: "100vw", miniMObile: "100vw" },
-            height: "100vh",
-            margin: { lg: "auto", miniMobile: "0px" },
-            transition: "transform 0.5s ease-out",
-            transform:
-              showSections === "sectionFour"
-                ? "translateX(0)"
-                : "translateX(100%)",
-          }}
-        >
+      <Box
+        style={{
+          transition: "transform 0.5s ease-out",
+          transform:
+            showSections === "sectionFour"
+              ? "translateX(0)"
+              : "translateX(100%)",
+        }}
+      >
+        {showSections === "sectionFour" && (
           <Box
             sx={{
               position: "relative",
@@ -207,24 +228,19 @@ const Boochi = () => {
               <SectionFourGIF />
             </Box>
           </Box>
-        </Box>
-      )}
-
+        )}
+      </Box>
       {/* Sectoin Five */}
-
-      {showSections === "sectionFive" && (
-        <Box
-          sx={{
-            width: { lg: "100vw", miniMObile: "100vw" },
-            height: "100vh",
-            margin: { lg: "auto", miniMobile: "0px" },
-            transition: "transform 0.5s ease-out",
-            transform:
-              showSections === "sectionFive"
-                ? "translateX(0)"
-                : "translateX(100%)",
-          }}
-        >
+      <Box
+        style={{
+          transition: "transform 0.5s ease-out",
+          transform:
+            showSections === "sectionFive"
+              ? "translateX(0)"
+              : "translateX(100%)",
+        }}
+      >
+        {showSections === "sectionFive" && (
           <Box
             sx={{
               position: "relative",
@@ -244,8 +260,8 @@ const Boochi = () => {
               />
             </Box>
           </Box>
-        </Box>
-      )}
+        )}
+      </Box>
     </Box>
   );
 };
