@@ -10,16 +10,16 @@ const Boochi = () => {
   const [src, setSrc] = useState<string>(
     "images/Animations/booreAndMonster.gif"
   );
-  const [tempSrc, setTempSrc] = useState<string>("");
+  // const [tempSrc, setTempSrc] = useState<string>("");
 
-  const gifRef = useRef<HTMLImageElement>(null);
+  // const gifRef = useRef<HTMLImageElement>(null);
 
-  function handleClick(): void {
-    setTempSrc("images/Animations/banner - CLICKABLE.gif");
-    setTimeout(() => {
-      setTempSrc("");
-    }, 2000);
-  }
+  // function handleClick(): void {
+  //   setTempSrc("images/Animations/banner - CLICKABLE.gif");
+  //   setTimeout(() => {
+  //     setTempSrc("");
+  //   }, 2000);
+  // }
 
   return (
     <Box>
@@ -76,9 +76,9 @@ const Boochi = () => {
                 alt="My image"
                 style={{ maxWidth: "100%" }}
               />
-              {/* <SectionOneGIF /> */}
+              <SectionOneGIF />
 
-              <img
+              {/* <img
                 ref={gifRef}
                 src={tempSrc || src}
                 alt="My GIF"
@@ -92,7 +92,7 @@ const Boochi = () => {
                   zIndex: 2,
                 }}
                 onClick={handleClick}
-              />
+              /> */}
             </Box>
           </Box>
         )}
