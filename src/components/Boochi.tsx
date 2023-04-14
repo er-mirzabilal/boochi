@@ -142,7 +142,10 @@ const Boochi = () => {
               position: "relative",
             }}
           >
-            <Box sx={{ position: "absolute" }}>
+            <Box
+              onClick={() => setShowSections("sectionFour")}
+              sx={{ position: "absolute", zIndex: 2 }}
+            >
               <img
                 src="/images/Section3/ArchiveRoomLightning.png"
                 alt="My image"
@@ -150,10 +153,7 @@ const Boochi = () => {
               />
             </Box>
 
-            <Box
-              onClick={() => setShowSections("sectionFour")}
-              sx={{ position: "absolute" }}
-            >
+            <Box sx={{ position: "absolute" }}>
               <img
                 src="/images/Section3/ArchiveRoomFire.gif"
                 alt="My image"
@@ -182,7 +182,10 @@ const Boochi = () => {
               position: "relative",
             }}
           >
-            <Box sx={{ position: "absolute" }}>
+            <Box
+              onClick={() => setShowSections("sectionFive")}
+              sx={{ position: "absolute", zIndex: 2 }}
+            >
               <img
                 src="/images/Section4/SecretChamberLight.png"
                 alt="My image"
@@ -190,10 +193,7 @@ const Boochi = () => {
               />
             </Box>
 
-            <Box
-              onClick={() => setShowSections("sectionFive")}
-              sx={{ position: "absolute" }}
-            >
+            <Box sx={{ position: "absolute" }}>
               <img
                 src="/images/Section4/SecretChamberFire.gif"
                 alt="My image"

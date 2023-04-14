@@ -42,7 +42,7 @@ const SectionTwoGIF = (props: any) => {
     setTempSrcKit("images/Animations/Boo5kitsuneboo_CLICKABLE.gif");
     setTimeout(() => {
       setTempSrcKit("");
-    }, 1800);
+    }, 2000);
   }
 
   return (
@@ -71,7 +71,7 @@ const SectionTwoGIF = (props: any) => {
         width={"8%"}
         style={{
           position: "absolute",
-          top: "13%",
+          top: "14%",
           left: "15%",
           transform: "translate(-50%, -50%)",
           cursor: "pointer",
