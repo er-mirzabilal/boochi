@@ -7,9 +7,6 @@ import SectionFourGIF from "./SectionFourGIF";
 
 const Boochi = () => {
   const [showSections, setShowSections] = useState("sectionOne");
-  const [src, setSrc] = useState<string>(
-    "images/Animations/booreAndMonster.gif"
-  );
 
   return (
     <Box>
@@ -81,49 +78,50 @@ const Boochi = () => {
               : "translateX(100%)",
         }}
       >
-        {showSections === "sectionTwo" && (
+        {/* {showSections === "sectionTwo" && ( */}
+        <Box
+          sx={{
+            position: "relative",
+            display: showSections === "sectionTwo" ? "block" : "none",
+          }}
+        >
           <Box
-            sx={{
-              position: "relative",
-            }}
+            onClick={() => setShowSections("sectionThree")}
+            sx={{ position: "absolute", zIndex: 2 }}
           >
-            <Box
-              onClick={() => setShowSections("sectionThree")}
-              sx={{ position: "absolute", zIndex: 2 }}
-            >
-              <img
-                src="/images/Section2/ThroneRoomGodRays.png"
-                alt="My image"
-                style={{ maxWidth: "100%", maxHeight: "100%" }}
-              />
-            </Box>
-            <Box sx={{ position: "absolute" }}>
-              <img
-                src="/images/Section2/SkyThroneroom.png"
-                alt="My image"
-                style={{ maxWidth: "100%", maxHeight: "100%" }}
-              />
-            </Box>
-            <Box sx={{ position: "absolute" }}>
-              <img
-                src="/images/Section2/ThroneLight.png"
-                alt="My image"
-                style={{ maxWidth: "100%", maxHeight: "100%" }}
-              />
-            </Box>
-
-            <Box sx={{ position: "absolute" }}>
-              <img
-                src="/images/Section2/ThroneRoomBackgroundLight.png"
-                alt="My image"
-                style={{ maxWidth: "100%", maxHeight: "100%" }}
-              />
-              <SectionTwoGIF />
-            </Box>
-
-            {/* gifs */}
+            <img
+              src="/images/Section2/ThroneRoomGodRays.png"
+              alt="My image"
+              style={{ maxWidth: "100%", maxHeight: "100%" }}
+            />
           </Box>
-        )}
+          <Box sx={{ position: "absolute" }}>
+            <img
+              src="/images/Section2/SkyThroneroom.png"
+              alt="My image"
+              style={{ maxWidth: "100%", maxHeight: "100%" }}
+            />
+          </Box>
+          <Box sx={{ position: "absolute" }}>
+            <img
+              src="/images/Section2/ThroneLight.png"
+              alt="My image"
+              style={{ maxWidth: "100%", maxHeight: "100%" }}
+            />
+          </Box>
+
+          <Box sx={{ position: "absolute" }}>
+            <img
+              src="/images/Section2/ThroneRoomBackgroundLight.png"
+              alt="My image"
+              style={{ maxWidth: "100%", maxHeight: "100%" }}
+            />
+            <SectionTwoGIF />
+          </Box>
+
+          {/* gifs */}
+        </Box>
+        {/* )} */}
       </Box>
 
       {/* Sectoin Three */}
@@ -136,34 +134,35 @@ const Boochi = () => {
               : "translateX(100%)",
         }}
       >
-        {showSections === "sectionThree" && (
+        {/* {showSections === "sectionThree" && ( */}
+        <Box
+          sx={{
+            position: "relative",
+            display: showSections === "sectionThree" ? "block" : "none",
+          }}
+        >
           <Box
-            sx={{
-              position: "relative",
-            }}
+            onClick={() => setShowSections("sectionFour")}
+            sx={{ position: "absolute", zIndex: 2 }}
           >
-            <Box
-              onClick={() => setShowSections("sectionFour")}
-              sx={{ position: "absolute", zIndex: 2 }}
-            >
-              <img
-                src="/images/Section3/ArchiveRoomLightning.png"
-                alt="My image"
-                style={{ width: "100%", height: "100%" }}
-              />
-            </Box>
-
-            <Box sx={{ position: "absolute" }}>
-              <img
-                src="/images/Section3/ArchiveRoomFire.gif"
-                alt="My image"
-                // style={{ maxWidth: "100%", maxHeight: "100%" }}
-                style={{ width: "100%", height: "100%" }}
-              />
-              <SectionThreeGIF />
-            </Box>
+            <img
+              src="/images/Section3/ArchiveRoomLightning.png"
+              alt="My image"
+              style={{ width: "100%", height: "100%" }}
+            />
           </Box>
-        )}{" "}
+
+          <Box sx={{ position: "absolute" }}>
+            <img
+              src="/images/Section3/ArchiveRoomFire.gif"
+              alt="My image"
+              // style={{ maxWidth: "100%", maxHeight: "100%" }}
+              style={{ width: "100%", height: "100%" }}
+            />
+            <SectionThreeGIF />
+          </Box>
+        </Box>
+        {/* )}{" "} */}
       </Box>
 
       {/* Sectoin Four */}
@@ -176,33 +175,34 @@ const Boochi = () => {
               : "translateX(100%)",
         }}
       >
-        {showSections === "sectionFour" && (
+        {/* {showSections === "sectionFour" && ( */}
+        <Box
+          sx={{
+            position: "relative",
+            display: showSections === "sectionFour" ? "block" : "none",
+          }}
+        >
           <Box
-            sx={{
-              position: "relative",
-            }}
+            onClick={() => setShowSections("sectionFive")}
+            sx={{ position: "absolute", zIndex: 2 }}
           >
-            <Box
-              onClick={() => setShowSections("sectionFive")}
-              sx={{ position: "absolute", zIndex: 2 }}
-            >
-              <img
-                src="/images/Section4/SecretChamberLight.png"
-                alt="My image"
-                style={{ maxWidth: "100%", maxHeight: "100%" }}
-              />
-            </Box>
-
-            <Box sx={{ position: "absolute" }}>
-              <img
-                src="/images/Section4/SecretChamberFire.gif"
-                alt="My image"
-                style={{ maxWidth: "100%", maxHeight: "100%" }}
-              />
-              <SectionFourGIF />
-            </Box>
+            <img
+              src="/images/Section4/SecretChamberLight.png"
+              alt="My image"
+              style={{ maxWidth: "100%", maxHeight: "100%" }}
+            />
           </Box>
-        )}
+
+          <Box sx={{ position: "absolute" }}>
+            <img
+              src="/images/Section4/SecretChamberFire.gif"
+              alt="My image"
+              style={{ maxWidth: "100%", maxHeight: "100%" }}
+            />
+            <SectionFourGIF />
+          </Box>
+        </Box>
+        {/* )} */}
       </Box>
       {/* Sectoin Five */}
       <Box
@@ -214,27 +214,28 @@ const Boochi = () => {
               : "translateX(100%)",
         }}
       >
-        {showSections === "sectionFive" && (
+        {/* {showSections === "sectionFive" && ( */}
+        <Box
+          sx={{
+            position: "relative",
+            display: showSections === "sectionFive" ? "block" : "none",
+          }}
+        >
           <Box
             sx={{
-              position: "relative",
+              position: "absolute",
+              cursor: "pointer",
             }}
           >
-            <Box
-              sx={{
-                position: "absolute",
-                cursor: "pointer",
-              }}
-            >
-              <img
-                onClick={() => setShowSections("sectionOne")}
-                src="/images/Section5.gif"
-                alt="My image"
-                style={{ maxWidth: "100%", maxHeight: "100%" }}
-              />
-            </Box>
+            <img
+              onClick={() => setShowSections("sectionOne")}
+              src="/images/Section5.gif"
+              alt="My image"
+              style={{ maxWidth: "100%", maxHeight: "100%" }}
+            />
           </Box>
-        )}
+        </Box>
+        {/* )} */}
       </Box>
     </Box>
   );
