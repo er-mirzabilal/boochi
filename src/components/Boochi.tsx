@@ -11,24 +11,21 @@ const Boochi = () => {
   return (
     <Box>
       {/* Sectoin One */}
-
-      {showSections === "sectionOne" && (
-        <Box
-          sx={{
-            width: { lg: "100vw", miniMObile: "100vw" },
-            height: "100vh",
-            margin: { lg: "auto", miniMobile: "0px" },
-            transition: "transform 0.5s ease-out",
-            transform:
-              showSections === "sectionOne"
-                ? "translateX(0)"
-                : "translateX(100%)",
-          }}
-        >
+      <Box
+        style={{
+          transition: "transform 0.5s ease-out",
+          transform:
+            showSections === "sectionOne"
+              ? "translateX(0)"
+              : "translateX(100%)",
+        }}
+      >
+        {showSections === "sectionOne" && (
           <Box
             sx={{
               position: "relative",
-
+              // width: "100vw",
+              // height: "100vh",
               // overflow: "hidden",
             }}
           >
@@ -69,24 +66,19 @@ const Boochi = () => {
               <SectionOneGIF />
             </Box>
           </Box>
-        </Box>
-      )}
-
+        )}
+      </Box>
       {/* Sectoin Two */}
-
-      {showSections === "sectionTwo" && (
-        <Box
-          sx={{
-            width: { lg: "100vw", miniMObile: "100vw" },
-            height: "100vh",
-            margin: { lg: "auto", miniMobile: "0px" },
-            transition: "transform 0.5s ease-out",
-            transform:
-              showSections === "sectionTwo"
-                ? "translateX(0)"
-                : "translateX(100%)",
-          }}
-        >
+      <Box
+        style={{
+          transition: "transform 0.5s ease-out",
+          transform:
+            showSections === "sectionTwo"
+              ? "translateX(0)"
+              : "translateX(100%)",
+        }}
+      >
+        {showSections === "sectionTwo" && (
           <Box
             sx={{
               position: "relative",
@@ -128,8 +120,8 @@ const Boochi = () => {
 
             {/* gifs */}
           </Box>
-        </Box>
-      )}
+        )}
+      </Box>
 
       {/* Sectoin Three */}
 
