@@ -12,7 +12,7 @@ const SectionOneGIF = (props: any) => {
     setTempSrc("images/Animations/banner - CLICKABLE.gif");
     setTimeout(() => {
       setTempSrc("");
-    }, 2000);
+    }, 2400);
   }
 
   return (
