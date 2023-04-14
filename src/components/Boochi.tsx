@@ -26,7 +26,7 @@ const Boochi = () => {
               position: "relative",
               width: "100vw",
               height: "100vh",
-              // overflow: "hidden",
+              // overflow: "hidden",file:///home/usama/Downloads/boochi/Bitcoin%20Boos%20%E2%80%93%20The%20website%20hub%20of%20the%20Kingdom.html
             }}
           >
             <Box

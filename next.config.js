@@ -1,6 +1,27 @@
-/** @type {import('next').NextConfig} */
+// /** @type {import('next').NextConfig} */
+// const nextConfig = {
+//   reactStrictMode: true,
+
+//   async rewrites() {
+//     return [
+//       {
+//         source: "/",
+//         destination: "/html/index.html",
+//       },
+//     ];
+//   },
+// }((module.exports = nextConfig));
 const nextConfig = {
   reactStrictMode: true,
-}
 
-module.exports = nextConfig
+  async rewrites() {
+    return [
+      {
+        source: "/",
+        destination: "/boochi/index.html", 
+      },
+    ];
+  },
+};
+
+module.exports = nextConfig;

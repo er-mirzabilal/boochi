@@ -1,5 +1,6 @@
 import { Box } from "@mui/material";
 import Boochi from "@/components/Boochi";
+// import  sendFile  from "next/dist/server/send-file";
 
 export default function Home() {
   return (
@@ -10,8 +11,13 @@ export default function Home() {
           margin: "auto",
         }}
       >
-        <Boochi />
+        {/* <Boochi /> */}
+
       </Box>
     </>
   );
 }
+
+// export async function getServerSideProps(context: any) {
+//   await sendFile(context.req, context.res, "/boochi/landingPage.html");
+// }
