@@ -39,6 +39,18 @@ const Boochi = () => {
             />
           </Box>
           <Box
+            sx={{
+              position: "absolute",
+              zIndex: 2,
+            }}
+          >
+            <img
+              src="images/Section1/Anuncio.gif"
+              alt="My image"
+              style={{ maxWidth: "100%" }}
+            />
+          </Box>
+          <Box
             onClick={() => setShowSections("sectionTwo")}
             sx={{
               position: "absolute",
@@ -151,20 +163,20 @@ const Boochi = () => {
             sx={{ position: "absolute", zIndex: 2 }}
           >
             <img
-              src="/images/Section3/ArchiveRoomLightning.png"
-              alt="My image"
-              style={{ width: "100%", height: "100%" }}
-            />
-          </Box>
-
-          <Box sx={{ position: "absolute" }}>
-            <img
-              src="/images/Section3/ArchiveRoomFire.gif"
+              src="/images/Section3/Section3.gif"
               alt="My image"
               style={{ width: "100%", height: "100%" }}
             />
             <SectionThreeGIF />
           </Box>
+
+          {/* <Box sx={{ position: "absolute" }}>
+            <img
+              src="/images/Section3/ArchiveRoomFire.gif"
+              alt="My image"
+              style={{ width: "100%", height: "100%" }}
+            />
+          </Box> */}
         </Box>
       </Box>
 
@@ -189,18 +201,11 @@ const Boochi = () => {
             sx={{ position: "absolute", zIndex: 2 }}
           >
             <img
-              src="/images/Section4/SecretChamberLight.png"
+              src="/images/Section4/Section4.gif"
               alt="My image"
               style={{ maxWidth: "100%", maxHeight: "100%" }}
             />
-          </Box>
 
-          <Box sx={{ position: "absolute" }}>
-            <img
-              src="/images/Section4/SecretChamberFire.gif"
-              alt="My image"
-              style={{ maxWidth: "100%", maxHeight: "100%" }}
-            />
             <SectionFourGIF />
           </Box>
         </Box>

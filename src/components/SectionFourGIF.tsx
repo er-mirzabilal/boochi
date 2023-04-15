@@ -66,6 +66,19 @@ const SectionFourGIF = (props: any) => {
         }}
         onClick={handleClickWorker}
       />
+      <img
+        src="/images/Section4/thumb_ArrowTowardsMarket.gif"
+        alt="My image"
+        style={{
+          position: "absolute",
+          top: "50%",
+          right: -100,
+          transform: "translate(-50%, -50%)",
+
+          cursor: "pointer",
+          zIndex: 2,
+        }}
+      />
     </>
   );
 };
