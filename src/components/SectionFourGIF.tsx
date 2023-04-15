@@ -69,10 +69,11 @@ const SectionFourGIF = (props: any) => {
       <img
         src="/images/Section4/thumb_ArrowTowardsMarket.gif"
         alt="My image"
+        width={"10%"}
         style={{
           position: "absolute",
           top: "50%",
-          right: -100,
+          left: "95%",
           transform: "translate(-50%, -50%)",
 
           cursor: "pointer",
