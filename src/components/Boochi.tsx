@@ -33,12 +33,25 @@ const Boochi = () => {
             }}
           >
             <img
-              onClick={() => setShowSections("sectionTwo")}
               src="images/Section1/CastlePositionLight.png"
               alt="My image"
               style={{ maxWidth: "100%" }}
             />
           </Box>
+          <Box
+            onClick={() => setShowSections("sectionTwo")}
+            sx={{
+              position: "absolute",
+
+              width: "42%",
+              height: { lg: "40vh", md: "30vh", sm: "10vh", xs: "10vh" },
+
+              zIndex: 2,
+              left: "30%",
+              top: { lg: 70, md: 60, sm: 50, xs: 40 },
+              cursor: "pointer",
+            }}
+          ></Box>
           <Box
             sx={{
               position: "absolute",
