@@ -1,5 +1,5 @@
 import { Box } from "@mui/material";
-import Boochi from "@/components/Boochi";
+import Bitcoin from "@/components/Bitcoin";
 
 export default function Home() {
   return (
@@ -10,7 +10,7 @@ export default function Home() {
           margin: "auto",
         }}
       >
-        <Boochi />
+        <Bitcoin />
       </Box>
     </>
   );

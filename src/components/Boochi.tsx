@@ -197,7 +197,7 @@ const Boochi = () => {
           }}
         >
           <Box
-            onClick={() => setShowSections("sectionFive")}
+            // onClick={() => setShowSections("sectionFive")}
             sx={{ position: "absolute", zIndex: 2 }}
           >
             <img
