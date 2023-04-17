@@ -16,7 +16,7 @@ const Bitcoin = () => {
         position: "relative",
       }}
     >
-          {/* //i tried to do that movement work on this div by (setting background image) */}
+      {/* //i tried to do that movement work on this div by (setting background image) */}
 
       <Box
         onMouseMove={handleMouseMove}
@@ -117,12 +117,14 @@ const Bitcoin = () => {
               },
             }}
           >
-            <img
-              className="animate__animated animate__fadeInDown"
-              src="/images/B/B/Gallery.png"
-              alt="My image"
-              width={"33%"}
-            />
+            <a href="https://bitcoinboos.elementor.cloud/" target="_blank">
+              <img
+                className="animate__animated animate__fadeInDown"
+                src="/images/B/B/Gallery.png"
+                alt="My image"
+                width={"33%"}
+              />
+            </a>
           </Box>
 
           <img

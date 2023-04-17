@@ -223,20 +223,19 @@ const SwiperExplorer = () => {
       )}
       <Box
         style={{
-          transition: "transform 0.5s ease-out",
+          transition: "transform 0.8s ease-out",
 
-          transform: `translateX(${showSection ? "0" : "100%"})`,
+          transform: `translateY(${showSection ? "0" : "-100%"})`,
         }}
       >
         {showSection && (
           <Swiper
             // install Swiper modules
             modules={[Scrollbar, A11y, Mousewheel]}
-            spaceBetween={50}
-            slidesPerView={1}
-            // direction="horizontal"
+            slidesPerView={3}
+            direction="vertical"
             //   navigation
-            mousewheel={true}
+            // mousewheel={true}
             // scrollbar={{ draggable: true }}
             onSwiper={(swiper: any) => console.log(swiper)}
             onSlideChange={() => console.log("slide change")}
