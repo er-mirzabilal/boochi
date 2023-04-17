@@ -1,4 +1,3 @@
-import Explorer from "@/components/Explorer";
 import SwiperExplorer from "@/components/swiperExplorer";
 import React from "react";
 
