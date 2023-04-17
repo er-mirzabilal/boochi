@@ -1,10 +1,11 @@
-import Boochi from "@/components/Boochi";
+import Explorer from "@/components/Explorer";
+import SwiperExplorer from "@/components/swiperExplorer";
 import React from "react";
 
 const explore = () => {
   return (
     <div>
-      <Boochi />
+      <SwiperExplorer />
     </div>
   );
 };

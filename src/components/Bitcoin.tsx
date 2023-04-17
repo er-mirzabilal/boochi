@@ -4,17 +4,11 @@ import { Box } from "@mui/material";
 import React from "react";
 import "animate.css";
 const Bitcoin = () => {
-  const [hovered, setHovered] = useState(false);
+  const [position, setPosition] = useState({ x: 10, y: 10 });
 
-  const handleMouseEnter = () => {
-    setHovered(true);
-  };
-
-  const handleMouseLeave = () => {
-    setHovered(false);
-  };
-
-  const waveTransform = hovered ? "translateY(-5px) rotate(-3deg)" : "";
+  function handleMouseMove(e: any) {
+    setPosition({ x: e.clientX, y: e.clientY });
+  }
 
   return (
     <Box
@@ -23,8 +17,17 @@ const Bitcoin = () => {
       }}
     >
       <Box
+        onMouseMove={handleMouseMove}
+        style={
+          {
+            // transform: `translate(-${position.x / 50}px, -${position.y / 50}px)`,
+          }
+        }
         sx={{
           position: "relative",
+          backgroundImage: "url(/images/Section5.gif)",
+          // width: "100vw",
+          // height: "100vh",
         }}
       >
         <Box
@@ -38,6 +41,8 @@ const Bitcoin = () => {
             alt="My image"
             style={{ maxWidth: "100%", maxHeight: "100%" }}
           />
+
+          {/* <img src="/images/Section5.gif" alt="My Image" /> */}
 
           <img
             className="animate__animated animate__bounceInDown"
@@ -54,21 +59,28 @@ const Bitcoin = () => {
             }}
           />
           <a href="/explore">
-            <img
-              className="animate__animated animate__bounceIn"
-              src="/images/B/B/Enter the Kingdom.png"
-              alt="My image"
-              width={"20%"}
-              style={{
+            <Box
+              sx={{
                 position: "absolute",
+                display: "block",
+                width: "60%",
                 top: "33%",
                 left: "37%",
-                transform: "translate(-50%, -50%)",
-                zIndex: 2,
 
                 cursor: "pointer",
+
+                ":hover": {
+                  animation: "shake 1s",
+                },
               }}
-            />
+            >
+              <img
+                className="animate__animated animate__fadeInDown"
+                src="/images/B/B/Enter the Kingdom.png"
+                alt="My image"
+                width={"33%"}
+              />
+            </Box>
           </a>
 
           <img
@@ -79,29 +91,36 @@ const Bitcoin = () => {
             style={{
               position: "absolute",
               top: "40%",
-              left: "31%",
+              left: "30%",
               transform: "translate(-50%, -50%)",
 
               cursor: "pointer",
             }}
           />
 
-          <img
-            className="animate__animated animate__fadeInDown"
-            src="/images/B/B/Gallery.png"
-            alt="My image"
-            width={"20%"}
-            style={{
+          <Box
+            sx={{
               position: "absolute",
-              top: "43%",
-              left: "37%",
-              transform: `translate(-50%, -50%) ${waveTransform}`,
+              display: "block",
+              width: "60%",
+              top: "44%",
+              left: "36%",
+
               cursor: "pointer",
-              transition: "transform 0.3s ease-out",
+              transition: "transform 0.3s ease-in",
+
+              ":hover": {
+                animation: "shake 1s",
+              },
             }}
-            onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave}
-          />
+          >
+            <img
+              className="animate__animated animate__fadeInDown"
+              src="/images/B/B/Gallery.png"
+              alt="My image"
+              width={"33%"}
+            />
+          </Box>
 
           <img
             className="animate__animated animate__fadeInBottomRight"

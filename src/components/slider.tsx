@@ -1,29 +1,63 @@
-import React, { useRef, useState } from "react";
+import React, { useState, useEffect } from "react";
+import Slider, { Settings } from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import { Box } from "@mui/material";
-import SectionOneGIF from "./SectionOneGIF";
-import SectionTwoGIF from "./SectionTwoGIF";
-import SectionThreeGIF from "./SectionThreeGIF";
-import SectionFourGIF from "./SectionFourGIF";
+import SectionOneGIF from "./Gifs/SectionOneGIF";
+import SectionTwoGIF from "./Gifs/SectionTwoGIF";
+import SectionThreeGIF from "./Gifs/SectionThreeGIF";
+import SectionFourGIF from "./Gifs/SectionFourGIF";
 
-const Boochi = () => {
-  const [showSections, setShowSections] = useState("sectionOne");
+const Carousel: React.FC = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+  console.log(currentSlide, "currentSlide");
 
-  return (
-    <Box>
-      {/* Sectoin One */}
+  const settings: Settings = {
+    // dots: true,
+    infinite: false,
+    speed: 1800,
+
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    initialSlide: 0,
+    beforeChange: (newIndex) => setCurrentSlide(newIndex),
+    afterChange: (oldIndex) => setCurrentSlide(oldIndex),
+    arrows: true,
+    vertical: true,
+  };
+
+  useEffect(() => {
+    const handleScroll = (e: WheelEvent) => {
+      if (e.deltaY < 0 && currentSlide > 0) {
+        setCurrentSlide(currentSlide - 1);
+        console.log("working if condition");
+      } else if (e.deltaY > 0 && currentSlide < 4) {
+        setCurrentSlide(currentSlide + 1);
+        console.log("working else condition");
+      }
+    };
+
+    window.addEventListener("wheel", handleScroll);
+
+    return () => {
+      window.removeEventListener("wheel", handleScroll);
+    };
+  }, [currentSlide]);
+  const Section: React.FC = () => {
+    return (
       <Box
         style={{
           transition: "transform 0.5s ease-out",
-          transform:
-            showSections === "sectionOne"
-              ? "translateX(0)"
-              : "translateX(100%)",
+
+          transform: "translateX(100%)",
         }}
       >
         <Box
           sx={{
             position: "relative",
-            display: showSections === "sectionOne" ? "block" : "none",
+            width: "100vw",
+            height: "100vh",
+            // display: currentSlide === 0 ? "block" : "none",
           }}
         >
           <Box
@@ -51,7 +85,6 @@ const Boochi = () => {
             />
           </Box>
           <Box
-            onClick={() => setShowSections("sectionTwo")}
             sx={{
               position: "absolute",
 
@@ -89,26 +122,26 @@ const Boochi = () => {
           </Box>
         </Box>
       </Box>
-      {/* Sectoin Two */}
+    );
+  };
+  const SectionTwo: React.FC = () => {
+    return (
       <Box
         style={{
           transition: "transform 0.5s ease-out",
-          transform:
-            showSections === "sectionTwo"
-              ? "translateX(0)"
-              : "translateX(100%)",
+
+          transform: "translateX(100%)",
         }}
       >
         <Box
           sx={{
             position: "relative",
-            display: showSections === "sectionTwo" ? "block" : "none",
+            width: "100vw",
+            height: "100vh",
+            // display: currentSlide === 1 ? "block" : "none",
           }}
         >
-          <Box
-            onClick={() => setShowSections("sectionThree")}
-            sx={{ position: "absolute", zIndex: 2 }}
-          >
+          <Box sx={{ position: "absolute", zIndex: 2 }}>
             <img
               src="/images/Section2/ThroneRoomGodRays.png"
               alt="My image"
@@ -139,29 +172,25 @@ const Boochi = () => {
             <SectionTwoGIF />
           </Box>
         </Box>
-        {/* )} */}
       </Box>
-
-      {/* Sectoin Three */}
+    );
+  };
+  const SectionThree: React.FC = () => {
+    return (
       <Box
         style={{
           transition: "transform 0.5s ease-out",
-          transform:
-            showSections === "sectionThree"
-              ? "translateX(0)"
-              : "translateX(100%)",
         }}
       >
         <Box
           sx={{
             position: "relative",
-            display: showSections === "sectionThree" ? "block" : "none",
+            width: "100vw",
+            height: "100vh",
+            // display: currentSlide === 2 ? "block" : "none",
           }}
         >
-          <Box
-            onClick={() => setShowSections("sectionFour")}
-            sx={{ position: "absolute", zIndex: 2 }}
-          >
+          <Box sx={{ position: "absolute", zIndex: 2 }}>
             <img
               src="/images/Section3/Section3.gif"
               alt="My image"
@@ -169,37 +198,26 @@ const Boochi = () => {
             />
             <SectionThreeGIF />
           </Box>
-
-          {/* <Box sx={{ position: "absolute" }}>
-            <img
-              src="/images/Section3/ArchiveRoomFire.gif"
-              alt="My image"
-              style={{ width: "100%", height: "100%" }}
-            />
-          </Box> */}
         </Box>
       </Box>
-
-      {/* Sectoin Four */}
+    );
+  };
+  const SectionFour: React.FC = () => {
+    return (
       <Box
         style={{
           transition: "transform 0.5s ease-out",
-          transform:
-            showSections === "sectionFour"
-              ? "translateX(0)"
-              : "translateX(100%)",
         }}
       >
         <Box
           sx={{
             position: "relative",
-            display: showSections === "sectionFour" ? "block" : "none",
+            width: "100vw",
+            height: "100vh",
+            // display: currentSlide === 3 ? "block" : "none",
           }}
         >
-          <Box
-            // onClick={() => setShowSections("sectionFive")}
-            sx={{ position: "absolute", zIndex: 2 }}
-          >
+          <Box sx={{ position: "absolute", zIndex: 2 }}>
             <img
               src="/images/Section4/Section4.gif"
               alt="My image"
@@ -210,39 +228,20 @@ const Boochi = () => {
           </Box>
         </Box>
       </Box>
-      {/* Sectoin Five */}
-      <Box
-        style={{
-          transition: "transform 0.5s ease-out",
-          transform:
-            showSections === "sectionFive"
-              ? "translateX(0)"
-              : "translateX(100%)",
-        }}
-      >
-        <Box
-          sx={{
-            position: "relative",
-            display: showSections === "sectionFive" ? "block" : "none",
-          }}
-        >
-          <Box
-            sx={{
-              position: "absolute",
-              cursor: "pointer",
-            }}
-          >
-            <img
-              onClick={() => setShowSections("sectionOne")}
-              src="/images/Section5.gif"
-              alt="My image"
-              style={{ maxWidth: "100%", maxHeight: "100%" }}
-            />
-          </Box>
-        </Box>
-      </Box>
+    );
+  };
+
+  return (
+    <Box sx={{ width: "100%", height: "100%" }}>
+      <Slider {...settings} initialSlide={currentSlide}>
+        <Section />
+        <SectionTwo />
+        <SectionThree />
+
+        <SectionFour />
+      </Slider>
     </Box>
   );
 };
 
-export default Boochi;
+export default Carousel;
