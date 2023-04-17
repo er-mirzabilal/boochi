@@ -16,6 +16,8 @@ const Bitcoin = () => {
         position: "relative",
       }}
     >
+          {/* //i tried to do that movement work on this div by (setting background image) */}
+
       <Box
         onMouseMove={handleMouseMove}
         style={
@@ -36,6 +38,7 @@ const Bitcoin = () => {
             cursor: "pointer",
           }}
         >
+          {/* //this is the image on which we want to add movement */}
           <img
             src="/images/Section5.gif"
             alt="My image"
