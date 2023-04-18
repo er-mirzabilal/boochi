@@ -91,7 +91,6 @@ const SectionFourGIF = () => {
           left: "33%",
           transform: "translate(-50%, -50%)",
 
-          cursor: "pointer",
           zIndex: 2,
         }}
       />
@@ -106,7 +105,7 @@ const SectionFourGIF = () => {
           left: "67%",
           transform: "translate(-50%, -50%)",
 
-          cursor: "pointer",
+       
           zIndex: 2,
         }}
       />

@@ -17,22 +17,24 @@ const Bitcoin = () => {
       }}
     >
       <Box
-        onMouseMove={handleMouseMove}
-        style={{}}
         sx={{
           position: "relative",
-          backgroundImage: "url(/images/Section5.gif)",
+          // width: "100%",
+          // height: "100%",
+          // overflow: "hidden",
         }}
       >
         <Box
           sx={{
             position: "absolute",
+            // right: "-17px",
+            // overflowY: "scroll",
           }}
         >
           <img
             src="/images/Section5.gif"
             alt="My image"
-            style={{ width: "100vw" }}
+            style={{ width: "100vw", filter: "blur(4px)" }}
           />
 
           <img

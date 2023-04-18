@@ -10,7 +10,7 @@ const SectionTwoGIF = (props: any) => {
   const gifRef = useRef<HTMLImageElement>(null);
 
   function handleClick(): void {
-    setTempSrc("images/Animations/Boo0BooKingCLICKABLE.gif");
+    setTempSrc("images/Animations/Boo0BooKing_CLICKABLE.gif");
     setTimeout(() => {
       setTempSrc("");
     }, 1200);
@@ -28,7 +28,7 @@ const SectionTwoGIF = (props: any) => {
     setTempSrcCat("images/Animations/Boo58BlackCatBoo_CLICKABLE.gif");
     setTimeout(() => {
       setTempSrcCat("");
-    }, 1200);
+    }, 800);
   }
   // for ClickAbleKit
   const [srcKit, setSrcKit] = useState<string>(
@@ -43,7 +43,7 @@ const SectionTwoGIF = (props: any) => {
     setTempSrcKit("images/Animations/Boo5kitsuneboo_CLICKABLE.gif");
     setTimeout(() => {
       setTempSrcKit("");
-    }, 2000);
+    }, 2500);
   }
 
   //latter

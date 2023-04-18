@@ -53,11 +53,8 @@ export const Section = (props: any) => {
     <Box
       sx={{
         position: "relative",
-        // width: "100vw",
-        // height: "100vh",
-        background: "red",
-        display: "flex",
-        margin: "auto",
+        width: "100vw",
+        margin: 0,
       }}
     >
       <Box
@@ -72,6 +69,21 @@ export const Section = (props: any) => {
           cursor: "pointer",
         }}
       ></Box>
+      <Box
+        sx={{
+          position: "absolute",
+        }}
+      >
+        <img
+          src="images/Section1/CastlePositionLight.png"
+          alt="My image"
+          style={{
+            width: "100vw",
+
+            // height: "100vh",
+          }}
+        />
+      </Box>
       <Box
         sx={{
           position: "absolute",
@@ -95,7 +107,7 @@ export const Section = (props: any) => {
         <img
           src="images/Section1/SkyLight.png"
           alt="My image"
-          style={{ width: "100vw",  }}
+          style={{ width: "100vw" }}
         />
         <SectionOneGIF
           showSection={props.showSection}
@@ -140,34 +152,23 @@ const SectionOneGIF = (props: any) => {
         onClick={handleClick}
       />
 
-      <Box
-        onClick={() => props.setShowSection(true)}
-        sx={{
+      <img
+        src="images/Section1/Anuncio.gif"
+        alt="My image"
+        width={"90%"}
+        style={{
           position: "absolute",
 
           width: "80%",
           top: "33%",
           left: "15%",
           zIndex: 2,
-          cursor: "pointer",
-          transition: "transform 0.3s ease-in",
-
-          ":hover": {
-            animation: "shake 1s",
-          },
         }}
-      >
-        <img
-          src="images/Section1/Anuncio.gif"
-          alt="My image"
-          width={"90%"}
-          style={{}}
-        />
-      </Box>
+      />
 
       {/* castle */}
 
-      <Box
+      {/* <Box
         onClick={() => props.setShowSection(true)}
         sx={{
           position: "absolute",
@@ -190,7 +191,7 @@ const SectionOneGIF = (props: any) => {
           width={"60%"}
           style={{}}
         />
-      </Box>
+      </Box> */}
     </>
   );
 };
