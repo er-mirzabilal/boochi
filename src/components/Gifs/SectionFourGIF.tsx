@@ -66,7 +66,7 @@ const SectionFourGIF = () => {
       />
       <a href="/">
         <img
-          src="/images/Section4/thumb_ArrowTowardsMarket.gif"
+          src="/images/Animations/exit.jpeg"
           alt="My image"
           width={"10%"}
           style={{
@@ -105,7 +105,6 @@ const SectionFourGIF = () => {
           left: "67%",
           transform: "translate(-50%, -50%)",
 
-       
           zIndex: 2,
         }}
       />

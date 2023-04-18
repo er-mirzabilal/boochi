@@ -56,9 +56,9 @@ const Bitcoin = () => {
               sx={{
                 position: "absolute",
                 display: "block",
-                width: "20%",
+                width: "24%",
                 top: "33%",
-                left: "40%",
+                left: "38%",
 
                 cursor: "pointer",
 
@@ -71,7 +71,7 @@ const Bitcoin = () => {
                 className="animate__animated animate__fadeInDown"
                 src="/images/B/B/Enter the Kingdom.png"
                 alt="My image"
-                width={"93%"}
+                width={"98%"}
               />
             </Box>
           </a>

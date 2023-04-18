@@ -3,14 +3,15 @@ import { useRef, useState } from "react";
 
 const SectionTwoGIF = (props: any) => {
   const [src, setSrc] = useState<string>(
-    "/images/Animations/Boo0BooKing_IDLE.gif"
+    "/images/Animations/kingSkype.jpeg"
+    // "/images/Animations/king.png"
   );
   const [tempSrc, setTempSrc] = useState<string>("");
 
   const gifRef = useRef<HTMLImageElement>(null);
 
   function handleClick(): void {
-    setTempSrc("images/Animations/Boo0BooKing_CLICKABLE.gif");
+    setTempSrc("images/Animations/skypeKing.jpeg");
     setTimeout(() => {
       setTempSrc("");
     }, 1200);
