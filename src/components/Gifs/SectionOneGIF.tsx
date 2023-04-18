@@ -3,19 +3,69 @@ import { useRef, useState } from "react";
 
 export const Section = (props: any) => {
   return (
+    // <Box
+    //   sx={{
+    //     position: "relative",
+    //   }}
+    // >
+    //   <Box
+    //     onClick={() => props.setShowSection(true)}
+    //     sx={{
+    //       position: "absolute",
+
+    //       width: "42%",
+    //       height: { lg: "40vh", md: "30vh", sm: "10vh", xs: "10vh" },
+
+    //       zIndex: 2,
+    //       left: "30%",
+    //       top: { lg: 70, md: 60, sm: 50, xs: 40 },
+    //       cursor: "pointer",
+    //     }}
+    //   ></Box>
+    //   <Box
+    //     sx={{
+    //       position: "absolute",
+    //     }}
+    //   >
+    //     <img
+    //       src="images/Section1/ForegroundLight.png"
+    //       alt="My image"
+    //       style={{ maxWidth: "100%" }}
+    //     />
+    //   </Box>
+
+    //   <Box
+    //     sx={{
+    //       position: "absolute",
+    //     }}
+    //   >
+    //     <img
+    //       src="images/Section1/SkyLight.png"
+    //       alt="My image"
+    //       style={{ maxWidth: "100%" }}
+    //     />
+    //     <SectionOneGIF
+    //       showSection={props.showSection}
+    //       setShowSection={props.setShowSection}
+    //     />
+    //   </Box>
+    // </Box>
     <Box
       sx={{
         position: "relative",
+        // width: "100vw",
+        // height: "100vh",
+        background: "red",
+        display: "flex",
+        margin: "auto",
       }}
     >
       <Box
         onClick={() => props.setShowSection(true)}
         sx={{
           position: "absolute",
-
           width: "42%",
           height: { lg: "40vh", md: "30vh", sm: "10vh", xs: "10vh" },
-
           zIndex: 2,
           left: "30%",
           top: { lg: 70, md: 60, sm: 50, xs: 40 },
@@ -30,7 +80,10 @@ export const Section = (props: any) => {
         <img
           src="images/Section1/ForegroundLight.png"
           alt="My image"
-          style={{ maxWidth: "100%" }}
+          style={{
+            width: "100vw",
+            // height: "100vh",
+          }}
         />
       </Box>
 
@@ -42,7 +95,7 @@ export const Section = (props: any) => {
         <img
           src="images/Section1/SkyLight.png"
           alt="My image"
-          style={{ maxWidth: "100%" }}
+          style={{ width: "100vw",  }}
         />
         <SectionOneGIF
           showSection={props.showSection}
@@ -122,7 +175,7 @@ const SectionOneGIF = (props: any) => {
           width: "68%",
           top: "7%",
           left: "30.7%",
-          zIndex: 2,
+          // zIndex: 2,
           cursor: "pointer",
           transition: "transform 0.3s ease-in",
 

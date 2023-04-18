@@ -20,7 +20,7 @@ const Exploror = () => {
           <img
             src="/images/Section2/Section2.png"
             alt="My image"
-            style={{ maxWidth: "100%" }}
+            style={{  width: "100vw", }}
           />
           <SectionTwoGIF />
         </Box>
@@ -28,7 +28,7 @@ const Exploror = () => {
           <img
             src="/images/Section3/Section3.gif"
             alt="My image"
-            style={{ maxWidth: "100%" }}
+            style={{  width: "100vw", }}
           />
           <SectionThreeGIF />
         </Box>
@@ -36,7 +36,7 @@ const Exploror = () => {
           <img
             src="/images/Section4/Section4.gif"
             alt="My image"
-            style={{ maxWidth: "100%" }}
+            style={{ width: "100vw", }}
           />
           <SectionFourGIF />
         </Box>

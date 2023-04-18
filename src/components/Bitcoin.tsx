@@ -1,4 +1,4 @@
-import { useRef, useEffect, useState } from "react";
+import { useState } from "react";
 
 import { Box } from "@mui/material";
 import React from "react";
@@ -32,7 +32,7 @@ const Bitcoin = () => {
           <img
             src="/images/Section5.gif"
             alt="My image"
-            style={{ maxWidth: "100%", maxHeight: "100%" }}
+            style={{ width: "100vw" }}
           />
 
           <img

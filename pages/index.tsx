@@ -6,7 +6,7 @@ export default function Home() {
     <>
       <Box
         sx={{
-          maxWidth: "2450px",
+          // maxWidth: "2450px",
           margin: "auto",
         }}
       >
