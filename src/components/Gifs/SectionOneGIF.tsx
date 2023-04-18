@@ -173,7 +173,7 @@ const SectionOneGIF = (props: any) => {
         }}
       >
         <img
-          src="images/Section1/castleSS.png"
+          src="images/Section1/castleSS-removebg-preview.png"
           alt="My image"
           width={"60%"}
           style={{}}
