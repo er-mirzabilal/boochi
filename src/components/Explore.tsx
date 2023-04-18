@@ -1,6 +1,6 @@
 import { Box } from "@mui/material";
 import React, { useState } from "react";
-import SectionOneGIF, { Section } from "./Gifs/SectionOneGIF";
+import { Section } from "./Gifs/SectionOneGIF";
 import SectionFourGIF from "./Gifs/SectionFourGIF";
 import SectionThreeGIF from "./Gifs/SectionThreeGIF";
 import SectionTwoGIF from "./Gifs/SectionTwoGIF";

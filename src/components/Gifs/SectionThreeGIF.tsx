@@ -1,9 +1,7 @@
 import { useRef, useState } from "react";
 
-const SectionThreeGIF = (props: any) => {
-  const [src, setSrc] = useState<string>(
-    "/images/Animations/BooWizard_IDLE .gif"
-  );
+const SectionThreeGIF = () => {
+  const [src] = useState<string>("/images/Animations/BooWizard_IDLE .gif");
   const [tempSrc, setTempSrc] = useState<string>("");
 
   const gifRef = useRef<HTMLImageElement>(null);

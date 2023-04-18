@@ -8,19 +8,6 @@ export const Section = (props: any) => {
         position: "relative",
       }}
     >
-      {/* <Box
-        sx={{
-          position: "absolute",
-          zIndex: 2,
-        }}
-      >
-        <img
-          // src="images/Section1/CastlePositionLight.png"
-          alt="My image"
-          style={{ maxWidth: "100%" }}
-        />
-      </Box> */}
-
       <Box
         onClick={() => props.setShowSection(true)}
         sx={{
@@ -100,41 +87,15 @@ const SectionOneGIF = (props: any) => {
         onClick={handleClick}
       />
 
-      {/* <Box sx={{ width: "60%" }}>
-        <Box
-          sx={{
-            transition: "transform 0.3s ease-in",
-            position: "absolute",
-            top: "46.5%",
-            left: "53.5%",
-            transform: "translate(-50%, -50%)",
-            cursor: "pointer",
-            zIndex: 2,
-            ":hover": {
-              animation: "shake 1s",
-            },
-          }}
-        >
-          <img
-            src="images/Section1/Anuncio.gif"
-            alt="My image"
-            width="100%"
-            style={{}}
-          />
-        </Box>
-      </Box> */}
-
       <Box
         onClick={() => props.setShowSection(true)}
         sx={{
           position: "absolute",
 
           width: "80%",
-          // height: "10vh",
           top: "33%",
           left: "15%",
           zIndex: 2,
-          // background: "red",
           cursor: "pointer",
           transition: "transform 0.3s ease-in",
 
@@ -159,11 +120,9 @@ const SectionOneGIF = (props: any) => {
           position: "absolute",
 
           width: "68%",
-          // height: "10vh",
           top: "7%",
           left: "30.7%",
           zIndex: 2,
-          // background: "red",
           cursor: "pointer",
           transition: "transform 0.3s ease-in",
 

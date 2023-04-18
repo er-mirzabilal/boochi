@@ -16,36 +16,24 @@ const Bitcoin = () => {
         position: "relative",
       }}
     >
-      {/* //i tried to do that movement work on this div by (setting background image) */}
-
       <Box
         onMouseMove={handleMouseMove}
-        style={
-          {
-            // transform: `translate(-${position.x / 50}px, -${position.y / 50}px)`,
-          }
-        }
+        style={{}}
         sx={{
           position: "relative",
           backgroundImage: "url(/images/Section5.gif)",
-          // width: "100vw",
-          // height: "100vh",
         }}
       >
         <Box
           sx={{
             position: "absolute",
-            // cursor: "pointer",
           }}
         >
-          {/* //this is the image on which we want to add movement */}
           <img
             src="/images/Section5.gif"
             alt="My image"
             style={{ maxWidth: "100%", maxHeight: "100%" }}
           />
-
-          {/* <img src="/images/Section5.gif" alt="My Image" /> */}
 
           <img
             className="animate__animated animate__bounceInDown"
@@ -109,7 +97,6 @@ const Bitcoin = () => {
                 top: "44%",
                 left: "40%",
 
-                // background: "red",
                 cursor: "pointer",
                 transition: "transform 0.3s ease-in",
 

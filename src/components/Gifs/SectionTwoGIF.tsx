@@ -61,7 +61,6 @@ const SectionTwoGIF = (props: any) => {
           position: "absolute",
           top: "62.5%",
           left: "58%",
-          // left:"280%",
           transform: "translate(-50%, -50%)",
 
           cursor: "pointer",

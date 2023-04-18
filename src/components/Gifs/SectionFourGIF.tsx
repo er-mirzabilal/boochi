@@ -1,10 +1,8 @@
 import { useRef, useState } from "react";
 
-const SectionFourGIF = (props: any) => {
+const SectionFourGIF = () => {
   // for ClickAblepanda
-  const [srcPanda, setSrPanda] = useState<string>(
-    "images/Animations/Pand0_IDLEa.gif"
-  );
+  const [srcPanda] = useState<string>("images/Animations/Pand0_IDLEa.gif");
 
   const [tempSrcPanda, setTempSrcPanda] = useState<string>();
 
@@ -17,7 +15,7 @@ const SectionFourGIF = (props: any) => {
     }, 1200);
   }
   // for ClickAbleworker
-  const [srcWorker, setSrcWorker] = useState<string>(
+  const [srcWorker] = useState<string>(
     "/images/Animations/Boo3ConstructionBoo_IDLE.gif"
   );
 
