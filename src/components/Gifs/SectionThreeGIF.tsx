@@ -33,6 +33,37 @@ const SectionThreeGIF = (props: any) => {
         }}
         onClick={handleClick}
       />
+      {/* text */}
+      <img
+        src="/images/changes/changes/Section3TextBox1.png"
+        alt="My GIF"
+        width={"26%"}
+        style={{
+          position: "absolute",
+          top: "26.5%",
+          left: "17%",
+          transform: "translate(-50%, -50%)",
+
+          cursor: "pointer",
+          zIndex: 2,
+        }}
+        onClick={handleClick}
+      />
+      <img
+        src="/images/changes/changes/Section3TextBox2.png"
+        alt="My GIF"
+        width={"23%"}
+        style={{
+          position: "absolute",
+          top: "79.5%",
+          left: "50.0%",
+          transform: "translate(-50%, -50%)",
+
+          cursor: "pointer",
+          zIndex: 2,
+        }}
+        onClick={handleClick}
+      />
     </>
   );
 };

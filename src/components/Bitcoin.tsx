@@ -35,7 +35,7 @@ const Bitcoin = () => {
         <Box
           sx={{
             position: "absolute",
-            cursor: "pointer",
+            // cursor: "pointer",
           }}
         >
           {/* //this is the image on which we want to add movement */}
@@ -55,7 +55,7 @@ const Bitcoin = () => {
             style={{
               position: "absolute",
               top: "10%",
-              left: "32%",
+              left: "35%",
               transform: "translate(-50%, -50%)",
 
               cursor: "pointer",
@@ -66,9 +66,9 @@ const Bitcoin = () => {
               sx={{
                 position: "absolute",
                 display: "block",
-                width: "60%",
+                width: "20%",
                 top: "33%",
-                left: "37%",
+                left: "40%",
 
                 cursor: "pointer",
 
@@ -81,7 +81,7 @@ const Bitcoin = () => {
                 className="animate__animated animate__fadeInDown"
                 src="/images/B/B/Enter the Kingdom.png"
                 alt="My image"
-                width={"33%"}
+                width={"93%"}
               />
             </Box>
           </a>
@@ -94,37 +94,43 @@ const Bitcoin = () => {
             style={{
               position: "absolute",
               top: "40%",
-              left: "30%",
+              left: "32%",
               transform: "translate(-50%, -50%)",
 
               cursor: "pointer",
             }}
           />
+          <Box sx={{ width: "20%", background: "green" }}>
+            <Box
+              sx={{
+                position: "absolute",
 
-          <Box
-            sx={{
-              position: "absolute",
-              display: "block",
-              width: "60%",
-              top: "44%",
-              left: "36%",
+                width: "20%",
+                top: "44%",
+                left: "40%",
 
-              cursor: "pointer",
-              transition: "transform 0.3s ease-in",
+                // background: "red",
+                cursor: "pointer",
+                transition: "transform 0.3s ease-in",
 
-              ":hover": {
-                animation: "shake 1s",
-              },
-            }}
-          >
-            <a href="https://bitcoinboos.elementor.cloud/" target="_blank">
-              <img
-                className="animate__animated animate__fadeInDown"
-                src="/images/B/B/Gallery.png"
-                alt="My image"
-                width={"33%"}
-              />
-            </a>
+                ":hover": {
+                  animation: "shake 1s",
+                },
+              }}
+            >
+              <a
+                href="https://bitcoinboos.elementor.cloud/gallery/"
+                target="_blank"
+              >
+                <img
+                  className="animate__animated animate__fadeInDown"
+                  src="/images/B/B/Gallery.png"
+                  alt="My image"
+                  width={"90%"}
+                  style={{}}
+                />
+              </a>
+            </Box>
           </Box>
 
           <img
@@ -135,7 +141,7 @@ const Bitcoin = () => {
             style={{
               position: "absolute",
               top: "40%",
-              left: "56%",
+              left: "59%",
               transform: "translate(-50%, -50%)",
 
               cursor: "pointer",

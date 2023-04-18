@@ -82,6 +82,36 @@ const SectionFourGIF = (props: any) => {
           }}
         />
       </a>
+      {/* text */}
+      <img
+        src="/images/changes/changes/Section4Textbox1.png"
+        alt="My image"
+        width={"23%"}
+        style={{
+          position: "absolute",
+          top: "24%",
+          left: "33%",
+          transform: "translate(-50%, -50%)",
+
+          cursor: "pointer",
+          zIndex: 2,
+        }}
+      />
+
+      <img
+        src="/images/changes/changes/Section4Textbox2.png"
+        alt="My image"
+        width={"27%"}
+        style={{
+          position: "absolute",
+          top: "37%",
+          left: "67%",
+          transform: "translate(-50%, -50%)",
+
+          cursor: "pointer",
+          zIndex: 2,
+        }}
+      />
     </>
   );
 };
