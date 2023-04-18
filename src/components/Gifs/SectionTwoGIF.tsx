@@ -69,7 +69,6 @@ const SectionTwoGIF = (props: any) => {
         }}
         onClick={handleClick}
       />
-
       <img
         ref={gifRefCat}
         src={tempSrcCat || srcCat}
@@ -100,39 +99,38 @@ const SectionTwoGIF = (props: any) => {
         }}
         onClick={handleClickKit}
       />
-      {!srcLetter && (
-        <img
-          src="images/changes/changes/ScrollClosed.png"
-          alt="My GIF"
-          width={"40%"}
-          style={{
-            position: "absolute",
-            top: "118%",
-            left: "70%",
-            transform: "translate(-50%, -50%)",
-            cursor: "pointer",
-            zIndex: 2,
-          }}
-          onClick={() => setSrcLetter(!srcLetter)}
-        />
-      )}
 
-      {srcLetter && (
-        <img
-          src="images/changes/changes/ScrollOpenContent.png"
-          alt="My GIF"
-          width={"40%"}
-          style={{
-            position: "absolute",
-            top: "55.4%",
-            left: "70%",
-            transform: "translate(-50%, -50%)",
-            cursor: "pointer",
-            zIndex: 2,
-          }}
-          onClick={() => setSrcLetter(!srcLetter)}
-        />
-      )}
+      <img
+        src="images/changes/changes/ScrollClosed.png"
+        alt="My GIF"
+        width={"40%"}
+        style={{
+          position: "absolute",
+          display: srcLetter ? "none" : "block",
+          top: "118%",
+          left: "70%",
+          transform: "translate(-50%, -50%)",
+          cursor: "pointer",
+          zIndex: 2,
+        }}
+        onClick={() => setSrcLetter(!srcLetter)}
+      />
+
+      <img
+        src="images/changes/changes/ScrollOpenContent.png"
+        alt="My GIF"
+        width={"40%"}
+        style={{
+          position: "absolute",
+          top: "55.4%",
+          display: srcLetter ? "block" : "none",
+          left: "70%",
+          transform: "translate(-50%, -50%)",
+          cursor: "pointer",
+          zIndex: 2,
+        }}
+        onClick={() => setSrcLetter(!srcLetter)}
+      />
     </>
   );
 };
