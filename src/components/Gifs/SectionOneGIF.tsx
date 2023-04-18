@@ -61,9 +61,10 @@ export const Section = (props: any) => {
         onClick={() => props.setShowSection(true)}
         sx={{
           position: "absolute",
+          // background: "red",
           width: "42%",
-          height: { lg: "40vh", md: "30vh", sm: "10vh", xs: "10vh" },
-          zIndex: 2,
+          height: { lg: "41vh", md: "30vh", sm: "10vh", xs: "10vh" },
+          zIndex: 3,
           left: "30%",
           top: { lg: 70, md: 60, sm: 50, xs: 40 },
           cursor: "pointer",
