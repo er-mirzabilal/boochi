@@ -63,7 +63,7 @@ export const Section = (props: any) => {
           position: "absolute",
           // background: "red",
           width: "42%",
-          height: { lg: "34vh", md: "30vh", sm: "15vh", xs: "10vh" },
+          height: { lg: "42vh", md: "34vh", sm: "18vh", xs: "10vh" },
           zIndex: 3,
           left: "30%",
           top: { lg: 70, md: 60, sm: 50, xs: 40 },
