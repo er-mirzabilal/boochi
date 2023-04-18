@@ -6,34 +6,21 @@ export const Section = (props: any) => {
     <Box
       sx={{
         position: "relative",
-
-        // display: currentSlide === 0 ? "block" : "none",
       }}
     >
-      <Box
+      {/* <Box
         sx={{
           position: "absolute",
           zIndex: 2,
         }}
       >
         <img
-          src="images/Section1/CastlePositionLight.png"
+          // src="images/Section1/CastlePositionLight.png"
           alt="My image"
           style={{ maxWidth: "100%" }}
         />
-      </Box>
-      <Box
-        sx={{
-          position: "absolute",
-          zIndex: 2,
-        }}
-      >
-        <img
-          src="images/Section1/Anuncio.gif"
-          alt="My image"
-          style={{ maxWidth: "100%" }}
-        />
-      </Box>
+      </Box> */}
+
       <Box
         onClick={() => props.setShowSection(true)}
         sx={{
@@ -59,6 +46,7 @@ export const Section = (props: any) => {
           style={{ maxWidth: "100%" }}
         />
       </Box>
+
       <Box
         sx={{
           position: "absolute",
@@ -69,13 +57,17 @@ export const Section = (props: any) => {
           alt="My image"
           style={{ maxWidth: "100%" }}
         />
-        <SectionOneGIF />
+        <SectionOneGIF
+          showSection={props.showSection}
+          setShowSection={props.setShowSection}
+        />
       </Box>
     </Box>
   );
 };
 
 const SectionOneGIF = (props: any) => {
+  console.log(props, "props for section 1 ");
   const [src, setSrc] = useState<string>(
     "images/Animations/booreAndMonster.gif"
   );
@@ -107,6 +99,86 @@ const SectionOneGIF = (props: any) => {
         }}
         onClick={handleClick}
       />
+
+      {/* <Box sx={{ width: "60%" }}>
+        <Box
+          sx={{
+            transition: "transform 0.3s ease-in",
+            position: "absolute",
+            top: "46.5%",
+            left: "53.5%",
+            transform: "translate(-50%, -50%)",
+            cursor: "pointer",
+            zIndex: 2,
+            ":hover": {
+              animation: "shake 1s",
+            },
+          }}
+        >
+          <img
+            src="images/Section1/Anuncio.gif"
+            alt="My image"
+            width="100%"
+            style={{}}
+          />
+        </Box>
+      </Box> */}
+
+      <Box
+        onClick={() => props.setShowSection(true)}
+        sx={{
+          position: "absolute",
+
+          width: "80%",
+          // height: "10vh",
+          top: "33%",
+          left: "15%",
+          zIndex: 2,
+          // background: "red",
+          cursor: "pointer",
+          transition: "transform 0.3s ease-in",
+
+          ":hover": {
+            animation: "shake 1s",
+          },
+        }}
+      >
+        <img
+          src="images/Section1/Anuncio.gif"
+          alt="My image"
+          width={"90%"}
+          style={{}}
+        />
+      </Box>
+
+      {/* castle */}
+
+      <Box
+        onClick={() => props.setShowSection(true)}
+        sx={{
+          position: "absolute",
+
+          width: "68%",
+          // height: "10vh",
+          top: "7%",
+          left: "30.7%",
+          zIndex: 2,
+          // background: "red",
+          cursor: "pointer",
+          transition: "transform 0.3s ease-in",
+
+          ":hover": {
+            animation: "shake 1s",
+          },
+        }}
+      >
+        <img
+          src="images/Section1/castleSS.png"
+          alt="My image"
+          width={"60%"}
+          style={{}}
+        />
+      </Box>
     </>
   );
 };

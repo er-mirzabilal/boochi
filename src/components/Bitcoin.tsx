@@ -100,7 +100,7 @@ const Bitcoin = () => {
               cursor: "pointer",
             }}
           />
-          <Box sx={{ width: "20%", background: "green" }}>
+          <Box sx={{ width: "20%" }}>
             <Box
               sx={{
                 position: "absolute",
