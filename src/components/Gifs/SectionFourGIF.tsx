@@ -2,17 +2,17 @@ import { useRef, useState } from "react";
 
 const SectionFourGIF = () => {
   // for ClickAblepanda
-  const [srcPanda] = useState<string>("images/Animations/Pand0_IDLEa.gif");
+  const [srcPanda] = useState<string>("images/Section4/Pand0_IDLEa.gif");
 
   const [tempSrcPanda, setTempSrcPanda] = useState<string>();
 
   const gifRefPanda = useRef<HTMLImageElement>(null);
 
   function handleClickPnada(): void {
-    setTempSrcPanda("/images/Animations/Pand0_CLICKABLEa.gif");
+    setTempSrcPanda("/images/Section4/Pand0_CLICKABLEa.gif");
     setTimeout(() => {
       setTempSrcPanda("");
-    }, 1200);
+    }, 1800);
   }
   // for ClickAbleworker
   const [srcWorker] = useState<string>(
