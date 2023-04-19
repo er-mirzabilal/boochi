@@ -1,5 +1,6 @@
 import { Box } from "@mui/material";
 import { useRef, useState } from "react";
+import HoveringText from "../HoverText";
 
 export const Section = (props: any) => {
   return (
@@ -121,15 +122,13 @@ export const Section = (props: any) => {
 
 const SectionOneGIF = (props: any) => {
   console.log(props, "props for section 1 ");
-  const [src, setSrc] = useState<string>(
-    "images/Animations/booreAndMonster.gif"
-  );
+  const [src] = useState<string>("images/Section1/monster.jpeg");
   const [tempSrc, setTempSrc] = useState<string>("");
 
   const gifRef = useRef<HTMLImageElement>(null);
 
   function handleClick(): void {
-    setTempSrc("images/Animations/banner - CLICKABLE.gif");
+    setTempSrc("images/Section1/monsterGIF.jpeg");
     setTimeout(() => {
       setTempSrc("");
     }, 2400);
@@ -141,7 +140,7 @@ const SectionOneGIF = (props: any) => {
         ref={gifRef}
         src={tempSrc || src}
         alt="My GIF"
-        width="50%"
+        width="23%"
         style={{
           position: "absolute",
           top: "83.5%",
@@ -149,23 +148,34 @@ const SectionOneGIF = (props: any) => {
           transform: "translate(-50%, -50%)",
           cursor: "pointer",
           zIndex: 2,
+          // background: "red",
         }}
         onClick={handleClick}
       />
 
-      <img
-        src="images/Section1/Anuncio.gif"
+      {/* <img
+        src="images/Section1/text.jpeg"
         alt="My image"
         width={"90%"}
         style={{
           position: "absolute",
 
           width: "80%",
-          top: "33%",
-          left: "15%",
-          zIndex: 2,
+          top: "43%",
+          left: "12%",
         }}
-      />
+      /> */}
+      <Box
+        sx={{
+          position: "absolute",
+
+          width: "80%",
+          top: "43%",
+          left: "11%",
+        }}
+      >
+        <HoveringText text={"images/Section1/text.jpeg"} />
+      </Box>
       <img
         src="images/Section1/arrowCastle.gif"
         alt="My image"

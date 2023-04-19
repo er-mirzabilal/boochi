@@ -1,7 +1,7 @@
 import { useRef, useState } from "react";
 
 const SectionThreeGIF = () => {
-  const [src] = useState<string>("/images/Animations/BooWizard_IDLE .gif");
+  const [src] = useState<string>("/images/Section3/boo.jpeg");
   const [tempSrc, setTempSrc] = useState<string>("");
 
   const gifRef = useRef<HTMLImageElement>(null);
@@ -23,7 +23,7 @@ const SectionThreeGIF = () => {
         style={{
           position: "absolute",
           top: "65.5%",
-          left: "49.5%",
+          left: "50%",
           transform: "translate(-50%, -50%)",
 
           cursor: "pointer",

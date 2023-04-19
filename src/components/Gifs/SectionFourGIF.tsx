@@ -9,10 +9,10 @@ const SectionFourGIF = () => {
   const gifRefPanda = useRef<HTMLImageElement>(null);
 
   function handleClickPnada(): void {
-    setTempSrcPanda("/images/Section4/Pand0_CLICKABLEa.gif");
+    setTempSrcPanda("/images/Section4/Pand0_CLICKABLEa.jpeg");
     setTimeout(() => {
       setTempSrcPanda("");
-    }, 1800);
+    }, 2300);
   }
   // for ClickAbleworker
   const [srcWorker] = useState<string>(
@@ -24,10 +24,10 @@ const SectionFourGIF = () => {
   const gifRefWorker = useRef<HTMLImageElement>(null);
 
   function handleClickWorker(): void {
-    setTempSrcWorker("images/Animations/Boo3ConstructionBoo_CLICKABLE.gif");
+    setTempSrcWorker("images/Section4/worker.jpeg");
     setTimeout(() => {
       setTempSrcWorker("");
-    }, 1800);
+    }, 2500);
   }
 
   return (
@@ -39,7 +39,7 @@ const SectionFourGIF = () => {
         width={"7%"}
         style={{
           position: "absolute",
-          top: "77.5%",
+          top: "78%",
           left: "23%",
           transform: "translate(-50%, -50%)",
 
@@ -55,7 +55,7 @@ const SectionFourGIF = () => {
         width={"7%"}
         style={{
           position: "absolute",
-          top: "77%",
+          top: "78%",
           left: "50%",
           transform: "translate(-50%, -50%)",
 

@@ -1,5 +1,6 @@
 import { Box } from "@mui/material";
 import Bitcoin from "@/components/Bitcoin";
+import HoveringText from "@/components/HoverText";
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
         }}
       >
         <Bitcoin />
+       
       </Box>
     </>
   );

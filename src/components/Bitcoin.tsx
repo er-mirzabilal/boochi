@@ -4,12 +4,6 @@ import { Box } from "@mui/material";
 import React from "react";
 import "animate.css";
 const Bitcoin = () => {
-  const [position, setPosition] = useState({ x: 10, y: 10 });
-
-  function handleMouseMove(e: any) {
-    setPosition({ x: e.clientX, y: e.clientY });
-  }
-
   return (
     <Box
       sx={{
@@ -19,16 +13,11 @@ const Bitcoin = () => {
       <Box
         sx={{
           position: "relative",
-          // width: "100%",
-          // height: "100%",
-          // overflow: "hidden",
         }}
       >
         <Box
           sx={{
             position: "absolute",
-            // right: "-17px",
-            // overflowY: "scroll",
           }}
         >
           <img
@@ -47,8 +36,6 @@ const Bitcoin = () => {
               top: "10%",
               left: "35%",
               transform: "translate(-50%, -50%)",
-
-              cursor: "pointer",
             }}
           />
           <a href="/explore">
@@ -76,20 +63,29 @@ const Bitcoin = () => {
             </Box>
           </a>
 
-          <img
-            className="animate__animated animate__fadeInBottomRight"
-            src="/images/B/B/Twitter.png"
-            alt="My image"
-            width={"7%"}
-            style={{
+          <Box
+            sx={{
+              cursor: "pointer",
+              transition: "transform 0.3s ease-in",
               position: "absolute",
               top: "40%",
-              left: "32%",
-              transform: "translate(-50%, -50%)",
+              // background: "red",
 
-              cursor: "pointer",
+              left: "32%",
+              ":hover": {
+                animation: "shake 1s",
+              },
             }}
-          />
+          >
+            <a href="https://www.twitter.com/bitcoinboos" target="_blank">
+              <img
+                className="animate__animated animate__fadeInBottomRight"
+                src="/images/B/B/Twitter.png"
+                alt="My image"
+                width={"27%"}
+              />
+            </a>
+          </Box>
           <Box sx={{ width: "20%" }}>
             <Box
               sx={{
@@ -101,7 +97,7 @@ const Bitcoin = () => {
 
                 cursor: "pointer",
                 transition: "transform 0.3s ease-in",
-
+                zIndex: 4,
                 ":hover": {
                   animation: "shake 1s",
                 },
@@ -122,20 +118,29 @@ const Bitcoin = () => {
             </Box>
           </Box>
 
-          <img
-            className="animate__animated animate__fadeInBottomRight"
-            src="/images/B/B/Discord01.png"
-            alt="My image"
-            width={"7%"}
-            style={{
+          <Box
+            sx={{
+              cursor: "pointer",
+
+              transition: "transform 0.3s ease-in",
               position: "absolute",
+              // background: "red",
               top: "40%",
               left: "59%",
-              transform: "translate(-50%, -50%)",
-
-              cursor: "pointer",
+              ":hover": {
+                animation: "shake 1s",
+              },
             }}
-          />
+          >
+            <a href="https://discord.com/invite/bitcoinboos" target="_blank">
+              <img
+                className="animate__animated animate__fadeInBottomRight"
+                src="/images/B/B/Discord01.png"
+                alt="My image"
+                width={"27%"}
+              />
+            </a>
+          </Box>
         </Box>
       </Box>
     </Box>
