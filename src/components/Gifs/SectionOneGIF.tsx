@@ -166,6 +166,19 @@ const SectionOneGIF = (props: any) => {
           zIndex: 2,
         }}
       />
+      <img
+        src="images/Section1/arrowCastle-removebg-preview.png"
+        alt="My image"
+        width={"90%"}
+        style={{
+          position: "absolute",
+          transform: "rotate(63deg)",
+          width: "7%",
+          top: "5%",
+          left: "42%",
+          zIndex: 2,
+        }}
+      />
 
       {/* castle */}
 
