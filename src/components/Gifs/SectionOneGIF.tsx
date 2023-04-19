@@ -167,7 +167,7 @@ const SectionOneGIF = (props: any) => {
         }}
       />
       <img
-        src="images/Section1/arrowCastle-removebg-preview.png"
+        src="images/Section1/arrowCastle.gif"
         alt="My image"
         width={"90%"}
         style={{
