@@ -45,7 +45,7 @@ const Bitcoin = () => {
                 display: "block",
                 width: "24%",
                 top: "33%",
-                left: "38%",
+                left: "38.3%",
 
                 cursor: "pointer",
 
@@ -71,7 +71,7 @@ const Bitcoin = () => {
               top: "40%",
               // background: "red",
 
-              left: "32%",
+              left: "33%",
               ":hover": {
                 animation: "shake 1s",
               },
@@ -93,7 +93,7 @@ const Bitcoin = () => {
 
                 width: "20%",
                 top: "44%",
-                left: "40%",
+                left: "41%",
 
                 cursor: "pointer",
                 transition: "transform 0.3s ease-in",
@@ -126,7 +126,7 @@ const Bitcoin = () => {
               position: "absolute",
               // background: "red",
               top: "40%",
-              left: "59%",
+              left: "59.9%",
               ":hover": {
                 animation: "shake 1s",
               },
