@@ -62,85 +62,110 @@ const Bitcoin = () => {
               />
             </Box>
           </a>
-
-          <Box
-            sx={{
-              cursor: "pointer",
-              transition: "transform 0.3s ease-in",
-              position: "absolute",
-              top: "40%",
-              // background: "red",
-
-              left: "33%",
-              ":hover": {
-                animation: "shake 1s",
-              },
-            }}
-          >
-            <a href="https://www.twitter.com/bitcoinboos" target="_blank">
-              <img
-                className="animate__animated animate__fadeInBottomRight"
-                src="/images/B/B/Twitter.png"
-                alt="My image"
-                width={"27%"}
-              />
-            </a>
-          </Box>
-          <Box sx={{ width: "20%" }}>
+          {/* new  */}
+          <Box sx={{ position: "absolute", top: "43%", left: "30%" }}>
             <Box
               sx={{
-                position: "absolute",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "baseline",
 
-                width: "20%",
-                top: "44%",
-                left: "41%",
-
-                cursor: "pointer",
-                transition: "transform 0.3s ease-in",
-                zIndex: 4,
-                ":hover": {
-                  animation: "shake 1s",
-                },
+                width: "60%",
               }}
             >
-              <a
-                href="https://bitcoinboos.elementor.cloud/gallery/"
-                target="_blank"
+              <Box
+                sx={{
+                  // position: "absolute",
+                  // cursor: "pointer",
+                  // transition: "transform 0.3s ease-in",
+
+                  // top: "40%",
+                  // background: "red",
+                  float: "right",
+                  left: "33%",
+                  ":hover": {
+                    animation: "shake 1s",
+                  },
+                }}
               >
-                <img
-                  className="animate__animated animate__fadeInDown"
-                  src="/images/B/B/Gallery.png"
-                  alt="My image"
-                  width={"90%"}
-                  style={{}}
-                />
-              </a>
+                <a href="https://www.twitter.com/bitcoinboos" target="_blank">
+                  <img
+                    className="animate__animated animate__fadeInBottomRight"
+                    src="/images/B/B/Twitter.png"
+                    alt="My image"
+                    width={"90%"}
+                  />
+                </a>
+              </Box>
+              <Box sx={{}}>
+                <Box
+                  sx={{
+                    width: "fit-content",
+                    // position: "absolute",
+
+                    // width: "20%",
+                    // top: "44%",
+                    // left: "41%",
+
+                    cursor: "pointer",
+                    transition: "transform 0.3s ease-in",
+                    // background: "blue",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    margin: "auto",
+
+                    ":hover": {
+                      animation: "shake 1s",
+                    },
+                  }}
+                >
+                  <a
+                    href="https://bitcoinboos.elementor.cloud/gallery/"
+                    target="_blank"
+                  >
+                    <img
+                      className="animate__animated animate__fadeInDown"
+                      src="/images/B/B/Gallery.png"
+                      alt="My image"
+                      width={"90%"}
+                      style={{
+                        //  background: "pink", 
+                         marginLeft: "2.5%" }}
+                    />
+                  </a>
+                </Box>
+              </Box>
+
+              <Box
+                sx={{
+                  cursor: "pointer",
+                  float: "left",
+                  transition: "transform 0.3s ease-in",
+                  // position: "absolute",
+                  // background: "green",
+                  // top: "40%",
+                  // left: "59.9%",
+                  ":hover": {
+                    animation: "shake 1s",
+                  },
+                }}
+              >
+                <a
+                  href="https://discord.com/invite/bitcoinboos"
+                  target="_blank"
+                >
+                  <img
+                    className="animate__animated animate__fadeInBottomRight"
+                    src="/images/B/B/Discord01.png"
+                    alt="My image"
+                    width={"90%"}
+                  />
+                </a>
+              </Box>
             </Box>
           </Box>
-
-          <Box
-            sx={{
-              cursor: "pointer",
-
-              transition: "transform 0.3s ease-in",
-              position: "absolute",
-              // background: "red",
-              top: "40%",
-              left: "59.9%",
-              ":hover": {
-                animation: "shake 1s",
-              },
-            }}
-          >
-            <a href="https://discord.com/invite/bitcoinboos" target="_blank">
-              <img
-                className="animate__animated animate__fadeInBottomRight"
-                src="/images/B/B/Discord01.png"
-                alt="My image"
-                width={"27%"}
-              />
-            </a>
-          </Box>
+          {/* new  */}
         </Box>
       </Box>
     </Box>
