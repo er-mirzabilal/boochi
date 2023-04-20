@@ -47,6 +47,7 @@ export const Section = (props: any) => {
     if (audio) {
       audio.muted = !audio.muted;
     }
+    setMusicBox(!musicBox);
   };
   return (
     // <Box
@@ -169,6 +170,36 @@ export const Section = (props: any) => {
           showSection={props.showSection}
           setShowSection={props.setShowSection}
         />
+        {!musicBox && (
+          <Box
+            sx={{
+              position: "absolute",
+              top: "75%",
+              left: "3%",
+              // width: { md: "20vw", sm: "15vw", miniMobile: "13vw" },
+              width: "20vw",
+              paddingBottom: 2,
+            }}
+          >
+            <Box
+              sx={{
+                position: "absolute",
+                width: "20vw",
+                top: "8%",
+                cursor: "pointer",
+                left: "4%",
+              }}
+            >
+              <img
+                // onClick={() => setMusicBox(!musicBox)}
+                onClick={toggleMute}
+                src="/images/Music/MusicButton.png"
+                alt="My image"
+                width={"20%"}
+              />
+            </Box>
+          </Box>
+        )}
         {musicBox && (
           <Box
             sx={{
