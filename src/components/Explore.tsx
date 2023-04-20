@@ -9,18 +9,29 @@ const Exploror = () => {
   const [showSection, setShowSection] = useState(false);
   return (
     <>
-      <Box sx={{ display: showSection ? "none" : "block" }}>
+      <Box
+        sx={{
+          display: showSection ? "none" : "block",
+          // opacity: showSection ? 1 : 0,
+          // transition: "opacity 0.5s ease-in-out",
+        }}
+      >
         <Section showSection={false} setShowSection={setShowSection} />
       </Box>
 
       <Box
-        sx={{ position: "relative", display: showSection ? "block" : "none" }}
+        sx={{
+          position: "relative",
+          display: showSection ? "block" : "none",
+          opacity: showSection ? 1 : 0,
+          transition: "opacity 1.2s ease-in-out",
+        }}
       >
         <Box sx={{ position: "relative", margin: 0 }}>
           <img
             src="/images/Section2/Section2.png"
             alt="My image"
-            style={{  width: "100vw", }}
+            style={{ width: "100vw" }}
           />
           <SectionTwoGIF />
         </Box>
@@ -28,7 +39,7 @@ const Exploror = () => {
           <img
             src="/images/Section3/Section3.gif"
             alt="My image"
-            style={{  width: "100vw", }}
+            style={{ width: "100vw" }}
           />
           <SectionThreeGIF />
         </Box>
@@ -36,7 +47,7 @@ const Exploror = () => {
           <img
             src="/images/Section4/Section4.gif"
             alt="My image"
-            style={{ width: "100vw", }}
+            style={{ width: "100vw" }}
           />
           <SectionFourGIF />
         </Box>

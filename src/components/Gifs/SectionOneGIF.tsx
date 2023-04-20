@@ -1,8 +1,53 @@
 import { Box } from "@mui/material";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import HoveringText from "../HoverText";
 
 export const Section = (props: any) => {
+  const [play, setPlay] = useState(false);
+  const [musicBox, setMusicBox] = useState(true);
+  const [isPlaying, setIsPlaying] = useState<boolean>(false);
+
+  const [isMuted, setIsMuted] = useState<boolean>(false);
+  const audioRef = useRef<HTMLAudioElement>(null);
+
+  useEffect(() => {
+    const audio = audioRef.current;
+    const handlePlayPause = () => {
+      const audio = audioRef.current;
+      if (audio) {
+        setIsPlaying(audio.paused ? false : true);
+      }
+    };
+
+    if (audio) {
+      audio.addEventListener("play", handlePlayPause);
+      audio.addEventListener("pause", handlePlayPause);
+
+      return () => {
+        audio.removeEventListener("play", handlePlayPause);
+        audio.removeEventListener("pause", handlePlayPause);
+      };
+    }
+  }, [audioRef.current]);
+
+  const togglePlayPause = () => {
+    const audio = audioRef.current;
+
+    if (audio) {
+      if (audio.paused) {
+        audio.play();
+      } else {
+        audio.pause();
+      }
+    }
+  };
+  const toggleMute = () => {
+    const audio = audioRef.current;
+    setIsMuted(!isMuted);
+    if (audio) {
+      audio.muted = !audio.muted;
+    }
+  };
   return (
     // <Box
     //   sx={{
@@ -65,12 +110,12 @@ export const Section = (props: any) => {
           // background: "red",
           width: "42%",
           height: {
-            xl:'40vh',
-            lg: "28vh",
-            md: "21vh",
+            xl: "45vh",
+            lg: "35vh",
+            md: "25vh",
             sm: "14vh",
-            xs: "10vh",
-            miniMobile: "8vh",
+            xs: "12vh",
+            miniMobile: "10vh",
           },
           // height: "40%",
           zIndex: 3,
@@ -124,6 +169,93 @@ export const Section = (props: any) => {
           showSection={props.showSection}
           setShowSection={props.setShowSection}
         />
+        {musicBox && (
+          <Box
+            sx={{
+              position: "absolute",
+              top: "75%",
+              left: "3%",
+              // width: { md: "20vw", sm: "15vw", miniMobile: "13vw" },
+              width: "25vw",
+              paddingBottom: 2,
+            }}
+          >
+            <Box sx={{ position: "absolute", width: "20vw", zIndex: 2 }}>
+              <img
+                src="/images/Music/ButtonBase.png"
+                alt="My image"
+                width={"90%"}
+              />
+
+              <audio
+                src="/images/Music/booBATTLE.wav"
+                ref={audioRef}
+                muted={isMuted}
+              />
+
+              <Box
+                onClick={togglePlayPause}
+                sx={{
+                  position: "absolute",
+                  cursor: "pointer",
+                  width: "12vw",
+                  display: play ? "none" : "block",
+                  top: "15%",
+                  zIndex: 2,
+
+                  left: "28%",
+                }}
+              >
+                <img
+                  src={
+                    isPlaying
+                      ? "/images/Music/PauseButton.png"
+                      : "/images/Music/PlayButton.png"
+                  }
+                  alt="My image"
+                  width={"55%"}
+                />
+              </Box>
+
+              <Box
+                sx={{
+                  position: "absolute",
+                  cursor: "pointer",
+                  width: "20vw",
+                  top: "8%",
+                  zIndex: 2,
+                  left: "65%",
+                }}
+              >
+                <img
+                  onClick={() => setMusicBox(!musicBox)}
+                  src="/images/Music/XButton.png"
+                  alt="My image"
+                  width={"20%"}
+                />
+              </Box>
+              <Box
+                sx={{
+                  position: "absolute",
+                  width: "20vw",
+                  top: "8%",
+
+                  left: "4%",
+
+                  // background: "red",
+                }}
+              >
+                <img
+                  onClick={toggleMute}
+                  src="/images/Music/MusicButton.png"
+                  alt="My image"
+                  width={"20%"}
+                  style={{ cursor: "pointer", zIndex: 2 }}
+                />
+              </Box>
+            </Box>
+          </Box>
+        )}
       </Box>
     </Box>
   );
@@ -162,18 +294,6 @@ const SectionOneGIF = (props: any) => {
         onClick={handleClick}
       />
 
-      {/* <img
-        src="images/Section1/text.jpeg"
-        alt="My image"
-        width={"90%"}
-        style={{
-          position: "absolute",
-
-          width: "80%",
-          top: "43%",
-          left: "12%",
-        }}
-      /> */}
       <Box
         sx={{
           position: "absolute",
@@ -198,33 +318,6 @@ const SectionOneGIF = (props: any) => {
           zIndex: 2,
         }}
       />
-
-      {/* castle */}
-
-      {/* <Box
-        onClick={() => props.setShowSection(true)}
-        sx={{
-          position: "absolute",
-
-          width: "68%",
-          top: "7%",
-          left: "30.7%",
-          // zIndex: 2,
-          cursor: "pointer",
-          transition: "transform 0.3s ease-in",
-
-          ":hover": {
-            animation: "shake 1s",
-          },
-        }}
-      >
-        <img
-          src="images/Section1/castleSS-removebg-preview.png"
-          alt="My image"
-          width={"60%"}
-          style={{}}
-        />
-      </Box> */}
     </>
   );
 };

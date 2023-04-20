@@ -40,7 +40,86 @@ const SectionFourGIF = () => {
 
   // const boxAnimationClass = isBoxVisible
   //   ? "animate__animated animate__fadeInBottomRight"
+
   //   : "";
+
+  const text1 = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries: IntersectionObserverEntry[]) => {
+        entries.forEach((entry: IntersectionObserverEntry) => {
+          if (entry.isIntersecting && text1.current) {
+            text1.current.classList.add(
+              "animate__animated",
+              "animate__backInLeft"
+            );
+            observer.unobserve(entry.target);
+          }
+        });
+      }
+    );
+
+    if (text1.current) {
+      observer.observe(text1.current);
+    }
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
+
+  const text3 = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries: IntersectionObserverEntry[]) => {
+        entries.forEach((entry: IntersectionObserverEntry) => {
+          if (entry.isIntersecting && text3.current) {
+            text3.current.classList.add(
+              "animate__animated",
+              "animate__fadeInBottomRight"
+            );
+            observer.unobserve(entry.target);
+          }
+        });
+      }
+    );
+
+    if (text3.current) {
+      observer.observe(text3.current);
+    }
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
+
+  const text2 = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries: IntersectionObserverEntry[]) => {
+        entries.forEach((entry: IntersectionObserverEntry) => {
+          if (entry.isIntersecting && text2.current) {
+            text2.current.classList.add(
+              "animate__animated",
+              "animate__backInRight"
+            );
+            observer.unobserve(entry.target);
+          }
+        });
+      }
+    );
+
+    if (text2.current) {
+      observer.observe(text2.current);
+    }
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
 
   return (
     <>
@@ -94,7 +173,9 @@ const SectionFourGIF = () => {
       </a>
 
       <Box
-        className="animate__animated animate__fadeInBottomRight"
+        // className="animate__animated animate__fadeInBottomRight"
+        ref={text1}
+        className="box"
         sx={{
           position: "absolute",
           top: "23.5%",
@@ -108,9 +189,8 @@ const SectionFourGIF = () => {
       </Box>
 
       <Box
-        // ref={boxRef || undefined}
-        // className={boxAnimationClass}
-        className="animate__animated animate__fadeInBottomRight"
+        ref={text2}
+        className="box"
         sx={{
           position: "absolute",
           top: "23.5%",
@@ -124,7 +204,9 @@ const SectionFourGIF = () => {
       </Box>
 
       <Box
-        className="animate__animated animate__fadeInBottomRight"
+        // className="animate__animated animate__fadeInBottomRight"
+        ref={text3}
+        className="box"
         sx={{
           position: "absolute",
           top: "88%",
@@ -140,4 +222,3 @@ const SectionFourGIF = () => {
   );
 };
 export default SectionFourGIF;
- 
