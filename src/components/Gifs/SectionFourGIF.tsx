@@ -1,4 +1,7 @@
-import { useRef, useState } from "react";
+import { Box } from "@mui/material";
+import { useEffect, useRef, useState } from "react";
+import HoveringText from "../HoverText";
+import "animate.css";
 
 const SectionFourGIF = () => {
   // for ClickAblepanda
@@ -29,6 +32,15 @@ const SectionFourGIF = () => {
       setTempSrcWorker("");
     }, 2500);
   }
+
+  // const [boxRef, isBoxVisible] = useOnScreen({
+  //   rootMargin: "-100px 0px",
+  //   threshold: 0.5,
+  // });
+
+  // const boxAnimationClass = isBoxVisible
+  //   ? "animate__animated animate__fadeInBottomRight"
+  //   : "";
 
   return (
     <>
@@ -80,36 +92,52 @@ const SectionFourGIF = () => {
           }}
         />
       </a>
-      {/* text */}
-      <img
-        src="/images/changes/changes/Section4Textbox1.png"
-        alt="My image"
-        width={"23%"}
-        style={{
+
+      <Box
+        className="animate__animated animate__fadeInBottomRight"
+        sx={{
           position: "absolute",
-          top: "24%",
+          top: "23.5%",
+          left: "13%",
+          transform: "translate(-50%, -50%)",
+          width: "37%",
+          zIndex: 2,
+        }}
+      >
+        <HoveringText text={"/images/Section4/Section4Text1.png"} />
+      </Box>
+
+      <Box
+        // ref={boxRef || undefined}
+        // className={boxAnimationClass}
+        className="animate__animated animate__fadeInBottomRight"
+        sx={{
+          position: "absolute",
+          top: "23.5%",
+          left: "50%",
+          transform: "translate(-50%, -50%)",
+          width: "33%",
+          zIndex: 2,
+        }}
+      >
+        <HoveringText text={"/images/Section4/Section4Text2.png"} />
+      </Box>
+
+      <Box
+        className="animate__animated animate__fadeInBottomRight"
+        sx={{
+          position: "absolute",
+          top: "88%",
           left: "33%",
           transform: "translate(-50%, -50%)",
-
+          width: "33%",
           zIndex: 2,
         }}
-      />
-
-      <img
-        src="/images/changes/changes/Section4Textbox2.png"
-        alt="My image"
-        width={"27%"}
-        style={{
-          position: "absolute",
-          top: "37%",
-          left: "67%",
-          transform: "translate(-50%, -50%)",
-
-          zIndex: 2,
-        }}
-      />
+      >
+        <HoveringText text={"/images/Section4/Section4Text3.png"} />
+      </Box>
     </>
   );
 };
-
 export default SectionFourGIF;
+ 

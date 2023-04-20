@@ -1,4 +1,6 @@
 import { useRef, useState } from "react";
+import HoveringText from "../HoverText";
+import { Box } from "@mui/material";
 
 const SectionThreeGIF = () => {
   const [src] = useState<string>("/images/Section3/boo.jpeg");
@@ -32,34 +34,32 @@ const SectionThreeGIF = () => {
         onClick={handleClick}
       />
       {/* text */}
-      <img
-        src="/images/changes/changes/Section3TextBox1.png"
-        alt="My GIF"
-        width={"26%"}
-        style={{
-          position: "absolute",
-          top: "26.5%",
-          left: "17%",
-          transform: "translate(-50%, -50%)",
 
+      <Box
+        sx={{
+          position: "absolute",
+          top: "34%",
+          left: "49.5%",
+          transform: "translate(-50%, -50%)",
+          width: "42%",
           zIndex: 2,
         }}
-        onClick={handleClick}
-      />
-      <img
-        src="/images/changes/changes/Section3TextBox2.png"
-        alt="My GIF"
-        width={"23%"}
-        style={{
+      >
+        <HoveringText text={"/images/Section3/Section3Text2.png"} />
+      </Box>
+
+      <Box
+        sx={{
           position: "absolute",
-          top: "79.5%",
+          top: "73.5%",
           left: "50.0%",
           transform: "translate(-50%, -50%)",
-
+          width: "24%",
           zIndex: 2,
         }}
-        onClick={handleClick}
-      />
+      >
+        <HoveringText text={"/images/Section3/Section3Text1.png"} />
+      </Box>
     </>
   );
 };

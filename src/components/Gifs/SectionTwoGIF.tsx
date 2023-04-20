@@ -47,9 +47,30 @@ const SectionTwoGIF = (props: any) => {
     }, 2500);
   }
 
-  //latter
+  const [scrollOpen, setScrollOpen] = useState(false);
+  const [scrollSrc, setScrollSrc] = useState(
+    "images/Section2/Scroll/ScrollClosed.png"
+  );
 
-  const [srcLetter, setSrcLetter] = useState(false);
+  function handleClickScroll(): void {
+    setScrollSrc("images/Section2/Scroll/ScrollOpening.gif");
+    setTimeout(() => {
+      setScrollSrc("images/Section2/Scroll/ScrollOpen.png");
+      setScrollOpen(true);
+     
+    }, 935);
+  }
+
+  function handleClickScrollClose(): void {
+    setScrollSrc("images/Section2/Scroll/ScrollClosing.gif");
+    setTimeout(() => {
+      setScrollSrc("images/Section2/Scroll/ScrollClosed.png");
+      setScrollOpen(false);
+     
+    }, 935);
+  }
+ 
+  //latter
 
   return (
     <>
@@ -100,37 +121,24 @@ const SectionTwoGIF = (props: any) => {
         onClick={handleClickKit}
       />
 
-      <img
-        src="images/changes/changes/ScrollClosed.png"
-        alt="My GIF"
-        width={"40%"}
-        style={{
-          position: "absolute",
-          display: srcLetter ? "none" : "block",
-          top: "118%",
-          left: "70%",
-          transform: "translate(-50%, -50%)",
-          cursor: "pointer",
-          zIndex: 2,
-        }}
-        onClick={() => setSrcLetter(!srcLetter)}
-      />
+
 
       <img
-        src="images/changes/changes/ScrollOpenContent.png"
+        src={scrollSrc}
+        onClick={scrollOpen ? handleClickScrollClose : handleClickScroll}
         alt="My GIF"
         width={"40%"}
         style={{
           position: "absolute",
-          top: "55.4%",
-          display: srcLetter ? "block" : "none",
+         
+          top: "48%",
           left: "70%",
           transform: "translate(-50%, -50%)",
           cursor: "pointer",
           zIndex: 2,
         }}
-        onClick={() => setSrcLetter(!srcLetter)}
       />
+
     </>
   );
 };
