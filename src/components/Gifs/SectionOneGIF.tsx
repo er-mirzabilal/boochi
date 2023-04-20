@@ -64,10 +64,19 @@ export const Section = (props: any) => {
           position: "absolute",
           // background: "red",
           width: "42%",
-          height: { lg: "42vh", md: "34vh", sm: "18vh", xs: "10vh" },
+          height: {
+            xl:'40vh',
+            lg: "28vh",
+            md: "21vh",
+            sm: "14vh",
+            xs: "10vh",
+            miniMobile: "8vh",
+          },
+          // height: "40%",
           zIndex: 3,
           left: "30%",
-          top: { lg: 70, md: 60, sm: 50, xs: 40 },
+          top: { lg: 60, md: 40, sm: 30, xs: 22, miniMobile: 18 },
+          // top: "20%",
           cursor: "pointer",
         }}
       ></Box>
