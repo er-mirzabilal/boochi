@@ -4,9 +4,12 @@ import { Section } from "./Gifs/SectionOneGIF";
 import SectionFourGIF from "./Gifs/SectionFourGIF";
 import SectionThreeGIF from "./Gifs/SectionThreeGIF";
 import SectionTwoGIF from "./Gifs/SectionTwoGIF";
+import Music from "./Gifs/music";
 
 const Exploror = () => {
   const [showSection, setShowSection] = useState(false);
+  const [musicBox, setMusicBox] = useState(true);
+
   return (
     <>
       <Box
@@ -23,8 +26,7 @@ const Exploror = () => {
         sx={{
           position: "relative",
           display: showSection ? "block" : "none",
-          opacity: showSection ? 1 : 0,
-          transition: "opacity 1.2s ease-in-out",
+          transition: "opacity 3.2s ease-in-out",
         }}
       >
         <Box sx={{ position: "relative", margin: 0 }}>
@@ -34,6 +36,22 @@ const Exploror = () => {
             style={{ width: "100vw" }}
           />
           <SectionTwoGIF />
+          <Box
+            sx={{
+              position: "absolute",
+              top: "75%",
+              left: "3%",
+              // width: { md: "20vw", sm: "15vw", miniMobile: "13vw" },
+              width: "20vw",
+              paddingBottom: 2,
+            }}
+          >
+            <Music
+              setMusicBox={setMusicBox}
+              musicBox={musicBox}
+              src={"/images/Music/booBATTLE.wav"}
+            />
+          </Box>
         </Box>
         <Box sx={{ position: "relative", marginTop: -1 }}>
           <img

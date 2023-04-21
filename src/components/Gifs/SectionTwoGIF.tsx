@@ -55,10 +55,10 @@ const SectionTwoGIF = (props: any) => {
   function handleClickScroll(): void {
     setScrollSrc("images/Section2/Scroll/ScrollOpening.gif");
     setTimeout(() => {
-      setScrollSrc("images/Section2/Scroll/ScrollOpen.png");
+      setScrollSrc("images/Section2/Scroll/ScrollOpenContent.png");
       setScrollOpen(true);
      
-    }, 935);
+    }, 950);
   }
 
   function handleClickScrollClose(): void {
@@ -67,7 +67,7 @@ const SectionTwoGIF = (props: any) => {
       setScrollSrc("images/Section2/Scroll/ScrollClosed.png");
       setScrollOpen(false);
      
-    }, 935);
+    }, 950);
   }
  
   //latter
@@ -130,7 +130,7 @@ const SectionTwoGIF = (props: any) => {
         width={"40%"}
         style={{
           position: "absolute",
-         
+        //  background:"red",
           top: "48%",
           left: "70%",
           transform: "translate(-50%, -50%)",

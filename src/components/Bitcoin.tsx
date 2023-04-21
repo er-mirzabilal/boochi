@@ -1,54 +1,11 @@
-import { RefObject, useEffect, useRef, useState } from "react";
+import { useState } from "react";
 
 import { Box } from "@mui/material";
 import React from "react";
 import "animate.css";
+import Music from "./Gifs/music";
 const Bitcoin = () => {
-  const [play, setPlay] = useState(false);
   const [musicBox, setMusicBox] = useState(true);
-
-  // const audioRef: RefObject<HTMLAudioElement> = useRef(null);
-
-  // useEffect(() => {
-  //   if (audioRef.current !== null) {
-  //     audioRef.current.play();
-  //   }
-  // }, []);
-
-  const [isPlaying, setIsPlaying] = useState<boolean>(false);
-  const audioRef = useRef<HTMLAudioElement>(null);
-
-  useEffect(() => {
-    const audio = audioRef.current;
-    const handlePlayPause = () => {
-      const audio = audioRef.current;
-      if (audio) {
-        setIsPlaying(audio.paused ? false : true);
-      }
-    };
-
-    if (audio) {
-      audio.addEventListener("play", handlePlayPause);
-      audio.addEventListener("pause", handlePlayPause);
-
-      return () => {
-        audio.removeEventListener("play", handlePlayPause);
-        audio.removeEventListener("pause", handlePlayPause);
-      };
-    }
-  }, [audioRef.current]);
-
-  const togglePlayPause = () => {
-    const audio = audioRef.current;
-
-    if (audio) {
-      if (audio.paused) {
-        audio.play();
-      } else {
-        audio.pause();
-      }
-    }
-  };
 
   return (
     <Box
@@ -214,114 +171,22 @@ const Bitcoin = () => {
           </Box>
           {/* music */}
 
-          {!musicBox && (
-            <Box
-              sx={{
-                position: "absolute",
-                top: "75%",
-                left: "3%",
-                // width: { md: "20vw", sm: "15vw", miniMobile: "13vw" },
-                width: "20vw",
-                paddingBottom: 2,
-              }}
-            >
-              <Box
-                sx={{
-                  position: "absolute",
-                  width: "20vw",
-                  top: "8%",
-                  cursor: "pointer",
-                  left: "4%",
-                }}
-              >
-                <img
-                  onClick={() => setMusicBox(!musicBox)}
-                  src="/images/Music/MusicButton.png"
-                  alt="My image"
-                  width={"20%"}
-                />
-              </Box>
-            </Box>
-          )}
-          {musicBox && (
-            <Box
-              sx={{
-                position: "absolute",
-                top: "75%",
-                left: "3%",
-                // width: { md: "20vw", sm: "15vw", miniMobile: "13vw" },
-                width: "20vw",
-                paddingBottom: 2,
-              }}
-            >
-              <Box sx={{ position: "absolute", width: "20vw" }}>
-                <img
-                  src="/images/Music/ButtonBase.png"
-                  alt="My image"
-                  width={"90%"}
-                />
+          <Box
+            sx={{
+              position: "absolute",
+              top: "75%",
+              left: "3%",
 
-                <audio src="/images/Music/booKingdom.wav" ref={audioRef} />
-
-                <Box
-                  onClick={togglePlayPause}
-                  sx={{
-                    position: "absolute",
-                    cursor: "pointer",
-                    width: "12vw",
-                    display: play ? "none" : "block",
-                    top: "15%",
-                    zIndex: 2,
-
-                    left: "28%",
-                  }}
-                >
-                  <img
-                    src={
-                      isPlaying
-                        ? "/images/Music/PauseButton.png"
-                        : "/images/Music/PlayButton.png"
-                    }
-                    alt="My image"
-                    width={"55%"}
-                  />
-                </Box>
-
-                <Box
-                  sx={{
-                    position: "absolute",
-                    cursor: "pointer",
-                    width: "20vw",
-                    top: "8%",
-                    zIndex: 2,
-                    left: "65%",
-                  }}
-                >
-                  <img
-                    onClick={() => setMusicBox(!musicBox)}
-                    src="/images/Music/XButton.png"
-                    alt="My image"
-                    width={"20%"}
-                  />
-                </Box>
-                <Box
-                  sx={{
-                    position: "absolute",
-                    width: "20vw",
-                    top: "8%",
-                    cursor: "pointer",
-                    left: "4%",
-                  }}
-                >
-                  <img
-                    src="/images/Music/MusicButton.png"
-                    alt="My image"
-                    width={"20%"}
-                  />
-                </Box>
-              </Box>
-            </Box>
-          )}
+              width: "20vw",
+              paddingBottom: 2,
+            }}
+          >
+            <Music
+              setMusicBox={setMusicBox}
+              musicBox={musicBox}
+              src={"/images/Music/booKingdom.wav"}
+            />
+          </Box>
         </Box>
       </Box>
     </Box>
