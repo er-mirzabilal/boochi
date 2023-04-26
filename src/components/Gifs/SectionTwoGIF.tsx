@@ -1,9 +1,7 @@
 import { useRef, useState } from "react";
 
 const SectionTwoGIF = () => {
-  const [src, setSrc] = useState<string>(
-    "/images/Animations/kingSkype.jpeg"
-  );
+  const [src, setSrc] = useState<string>("/images/Animations/kingSkype.jpeg");
   const [tempSrc, setTempSrc] = useState<string>("");
 
   const gifRef = useRef<HTMLImageElement>(null);
@@ -55,6 +53,12 @@ const SectionTwoGIF = () => {
     setTimeout(() => {
       setScrollSrc("images/Section2/Scroll/ScrollOpenContent.png");
       setScrollOpen(true);
+      // setTimeout(() => {
+      //   const image = document.querySelector(".scroll-open-image");
+      //   if (image) {
+      //     image.classList.add("visible");
+      //   }
+      // }, 100);
     }, 900);
   }
 
@@ -119,18 +123,30 @@ const SectionTwoGIF = () => {
 
       <img
         src={scrollSrc}
+        // className={`scroll-image ${scrollOpen ? "scroll-open-image" : ""}`}
         onClick={scrollOpen ? handleClickScrollClose : handleClickScroll}
         alt="My GIF"
         width={"40%"}
         style={{
           position: "absolute",
           // background: "red",
-          top: "18%",
+          top:
+            scrollSrc === "images/Section2/Scroll/ScrollClosed.png"
+              ? "18%"
+              : "48%",
           left: "70%",
           transform: "translate(-50%, -50%)",
+          // opacity:
+          //   scrollSrc === "images/Section2/Scroll/ScrollOpenContent.png"
+          //     ? 1
+          //     : 2,
+          transition: "opacity 1.2s ease-in-out",
           cursor: "pointer",
           zIndex: 2,
-          animation: "scrollShake 1.5s",
+          animation:
+            scrollSrc === "images/Section2/Scroll/ScrollClosed.png"
+              ? "scrollShake 1.5s"
+              : "",
         }}
         onMouseEnter={(e) => {
           e.currentTarget.style.animation = "scrollShake 1.5s";

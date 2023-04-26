@@ -60,19 +60,34 @@ html {
 }
 
 @keyframes scrollShake {
-    10%, 90% {
-      transform: translate(-50%, -50%) rotate(-3deg);
+
+    10%,
+    90% {
+        transform: translate(-50%, -50%) rotate(-3deg);
     }
-    
-    20%, 80% {
-      transform: translate(-50%, -50%) rotate(3deg);
+
+    20%,
+    80% {
+        transform: translate(-50%, -50%) rotate(3deg);
     }
-  
-    30%, 50%, 70% {
-      transform: translate(-50%, -50%) rotate(-3deg);
+
+    30%,
+    50%,
+    70% {
+        transform: translate(-50%, -50%) rotate(-3deg);
     }
-  
-    40%, 60% {
-      transform: translate(-50%, -50%) rotate(3deg);
+
+    40%,
+    60% {
+        transform: translate(-50%, -50%) rotate(3deg);
     }
-  }
+}
+
+.scroll-open-image {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.scroll-open-image.visible {
+    opacity: 1;
+}
