@@ -1,3 +1,4 @@
+import { Box } from "@mui/material";
 import { useEffect, useRef, useState } from "react";
 
 const SectionTwoGIF = () => {
@@ -49,28 +50,10 @@ const SectionTwoGIF = () => {
   const [scrollSrc, setScrollSrc] = useState(
     "images/Section2/Scroll/ScrollClosed.png"
   );
-  // console.log(scrollSrc, "scrollSrcscrollSrc");
-  // function handleClickScroll(): void {
-  //   setScrollSrc("images/Section2/Scroll/ScrollOpening.gif");
-  //   setTimeout(() => {
-  //     setScrollSrc("images/Section2/Scroll/ScrollOpenContent.png");
-  //     setScrollOpen(true);
-  //   }, 900);
-  //   if (scrollSrc === "images/Section2/Scroll/ScrollClosed.png") {
-  //     setTopPosition("18%");
-  //   } else {
-  //     setTopPosition("48%");
-  //   }
-  // }
 
   function handleClickScroll(): void {
     setScrollSrc("images/Section2/Scroll/ScrollOpening.gif");
     setTimeout(() => {
-      if (scrollSrc === "images/Section2/Scroll/ScrollClosed.png") {
-        setTopPosition("18%");
-      } else {
-        setTopPosition("48%");
-      }
       setScrollSrc("images/Section2/Scroll/ScrollOpenContent.png");
       setScrollOpen(true);
     }, 900);
@@ -78,14 +61,13 @@ const SectionTwoGIF = () => {
 
   console.log(topPosition, "topPosition");
 
-  useEffect(() => {
-    if (scrollSrc === "images/Section2/Scroll/ScrollClosed.png") {
-   
-      setTopPosition("18%");
-    } else {
-      setTopPosition("48%");
-    }
-  }, [scrollSrc]);
+  // useEffect(() => {
+  //   if (scrollSrc === "images/Section2/Scroll/ScrollClosed.png") {
+  //     setTopPosition("18%");
+  //   } else {
+  //     setTopPosition("48%");
+  //   }
+  // }, [scrollSrc]);
   function handleClickScrollClose(): void {
     setScrollSrc("images/Section2/Scroll/ScrollClosing.gif");
     setTimeout(() => {
@@ -157,10 +139,11 @@ const SectionTwoGIF = () => {
           //   scrollSrc === "images/Section2/Scroll/ScrollClosed.png"
           //     ? "18%"
           //     : "48%",
-          top: topPosition,
-          left: "70%",
-          transform: "translate(-50%, -50%)",
-          transition: "opacity 1.2s ease-in-out",
+          // top: topPosition,
+          top: "3%",
+          left: "50%",
+          // transform: "translate(-50%, -50%)",
+
           cursor: "pointer",
           zIndex: 2,
           animation:

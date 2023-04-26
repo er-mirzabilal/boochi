@@ -25,16 +25,24 @@ const Exploror = () => {
           position: "relative",
           display: showSection ? "block" : "none",
           transition: "opacity 3.2s ease-in-out",
+          background: "green",
+          
         }}
       >
-        <Box sx={{ position: "relative", margin: 0 }}>
+        <Box
+          sx={{
+            position: "relative",
+            margin: 0,
+            display: showSection ? "block" : "none",
+          }}
+        >
           <img
             src="/images/Section2/Section2.png"
             alt="My image"
             style={{ width: "100vw" }}
           />
           <SectionTwoGIF />
-          <Box
+          {/* <Box
             sx={{
               position: "fixed",
               top: {
@@ -55,24 +63,24 @@ const Exploror = () => {
               musicBox={musicBox}
               src={"/images/Music/booBATTLE.wav"}
             />
-          </Box>
+          </Box> */}
         </Box>
-        <Box sx={{ position: "relative", marginTop: -1 }}>
+        {/* <Box sx={{ position: "relative", marginTop: -1 }}>
           <img
             src="/images/Section3/Section3.gif"
             alt="My image"
             style={{ width: "100vw" }}
           />
           <SectionThreeGIF />
-        </Box>
-        <Box sx={{ position: "absolute", marginTop: -1 }}>
+        </Box> */}
+        {/* <Box sx={{ position: "absolute", marginTop: -1 }}>
           <img
             src="/images/Section4/Section4.gif"
             alt="My image"
             style={{ width: "100vw" }}
           />
           <SectionFourGIF />
-        </Box>
+        </Box> */}
       </Box>
     </>
   );
