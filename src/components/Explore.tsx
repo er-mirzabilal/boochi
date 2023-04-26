@@ -38,12 +38,21 @@ const Exploror = () => {
           <SectionTwoGIF />
           <Box
             sx={{
-              position: "absolute",
-              top: "75%",
+              // position: "absolute",
+              // top: "75%",
+              position: "fixed",
+              top: {
+                lg: "80%",
+                md: "50%",
+                sm: "33%",
+                xs: "20%",
+                miniMobile: "25%",
+              },
               left: "3%",
               // width: { md: "20vw", sm: "15vw", miniMobile: "13vw" },
               width: "20vw",
               paddingBottom: 2,
+              zIndex: 4,
             }}
           >
             <Music

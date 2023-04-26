@@ -4,7 +4,7 @@ const theme = createTheme({
   breakpoints: {
     values: {
       miniMobile: 0,
-      xs: 500,
+      xs: 390,
       sm: 600,
       md: 800,
       lg: 1200,

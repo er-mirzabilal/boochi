@@ -84,23 +84,28 @@ export const Section = (props: any) => {
 
         <Box
           sx={{
-            position: "absolute",
-            top: "75%",
+            // position: "absolute",
+            // top: "75%",
+            position: "fixed",
+            top: {
+              lg: "80%",
+              md: "50%",
+              sm: "33%",
+              xs: "20%",
+              miniMobile: "23%",
+            },
             left: "3%",
             // width: { md: "20vw", sm: "15vw", miniMobile: "13vw" },
             width: "20vw",
             paddingBottom: 2,
           }}
         >
-         
           <Music
             setMusicBox={setMusicBox}
             musicBox={musicBox}
             src={"/images/Music/booBATTLE.wav"}
           />
         </Box>
-
-      
       </Box>
     </Box>
   );

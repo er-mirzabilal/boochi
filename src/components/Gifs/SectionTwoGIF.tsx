@@ -2,6 +2,15 @@ import { Box } from "@mui/material";
 import { useRef, useState } from "react";
 
 const SectionTwoGIF = (props: any) => {
+  const [isHovered, setIsHovered] = useState(false);
+
+  const handleMouseOver = () => {
+    setIsHovered(true);
+  };
+
+  const handleMouseOut = () => {
+    setIsHovered(false);
+  };
   const [src, setSrc] = useState<string>(
     "/images/Animations/kingSkype.jpeg"
     // "/images/Animations/king.png"
@@ -57,8 +66,8 @@ const SectionTwoGIF = (props: any) => {
     setTimeout(() => {
       setScrollSrc("images/Section2/Scroll/ScrollOpenContent.png");
       setScrollOpen(true);
-     
-    }, 950);
+    }, 900);
+    setIsHovered(false);
   }
 
   function handleClickScrollClose(): void {
@@ -66,10 +75,10 @@ const SectionTwoGIF = (props: any) => {
     setTimeout(() => {
       setScrollSrc("images/Section2/Scroll/ScrollClosed.png");
       setScrollOpen(false);
-     
     }, 950);
+    setIsHovered(false);
   }
- 
+
   //latter
 
   return (
@@ -121,8 +130,6 @@ const SectionTwoGIF = (props: any) => {
         onClick={handleClickKit}
       />
 
-
-
       <img
         src={scrollSrc}
         onClick={scrollOpen ? handleClickScrollClose : handleClickScroll}
@@ -130,15 +137,21 @@ const SectionTwoGIF = (props: any) => {
         width={"40%"}
         style={{
           position: "absolute",
-        //  background:"red",
+          // background: "red",
           top: "48%",
           left: "70%",
           transform: "translate(-50%, -50%)",
           cursor: "pointer",
           zIndex: 2,
+          animation: "scrollShake 1.5s",
+        }}
+        onMouseEnter={(e) => {
+          e.currentTarget.style.animation = "scrollShake 1.5s";
+        }}
+        onMouseLeave={(e) => {
+          e.currentTarget.style.animation = "";
         }}
       />
-
     </>
   );
 };
