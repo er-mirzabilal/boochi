@@ -131,7 +131,7 @@ const SectionTwoGIF = () => {
         onMouseEnter={(e) => {
           e.currentTarget.style.animation =
             scrollSrc === "images/Section2/Scroll/ScrollClosed.png"
-              ? "scrollShake 1.5s"
+              ? "scrollShake 0.7s"
               : "";
         }}
         onMouseLeave={(e) => {
