@@ -49,17 +49,38 @@ const SectionTwoGIF = () => {
   const [scrollSrc, setScrollSrc] = useState(
     "images/Section2/Scroll/ScrollClosed.png"
   );
-  console.log(scrollSrc, "scrollSrcscrollSrc");
+  // console.log(scrollSrc, "scrollSrcscrollSrc");
+  // function handleClickScroll(): void {
+  //   setScrollSrc("images/Section2/Scroll/ScrollOpening.gif");
+  //   setTimeout(() => {
+  //     setScrollSrc("images/Section2/Scroll/ScrollOpenContent.png");
+  //     setScrollOpen(true);
+  //   }, 900);
+  //   if (scrollSrc === "images/Section2/Scroll/ScrollClosed.png") {
+  //     setTopPosition("18%");
+  //   } else {
+  //     setTopPosition("48%");
+  //   }
+  // }
+
   function handleClickScroll(): void {
     setScrollSrc("images/Section2/Scroll/ScrollOpening.gif");
     setTimeout(() => {
+      if (scrollSrc === "images/Section2/Scroll/ScrollClosed.png") {
+        setTopPosition("18%");
+      } else {
+        setTopPosition("48%");
+      }
       setScrollSrc("images/Section2/Scroll/ScrollOpenContent.png");
       setScrollOpen(true);
     }, 900);
   }
 
+  console.log(topPosition, "topPosition");
+
   useEffect(() => {
     if (scrollSrc === "images/Section2/Scroll/ScrollClosed.png") {
+   
       setTopPosition("18%");
     } else {
       setTopPosition("48%");
@@ -131,7 +152,7 @@ const SectionTwoGIF = () => {
         width={"40%"}
         style={{
           position: "absolute",
-          background: "red",
+          // background: "red",
           // top:
           //   scrollSrc === "images/Section2/Scroll/ScrollClosed.png"
           //     ? "18%"
