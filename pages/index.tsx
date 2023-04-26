@@ -9,10 +9,6 @@ export default function Home() {
         sx={{
           // maxWidth: "2450px",
           margin: "auto",
-          // opacity: showSection ? 1 : 0,
-          // opacity: 1,
-
-          // transition: "opacity 0.5s ease-in-out",
         }}
       >
         <Bitcoin />

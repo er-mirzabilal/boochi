@@ -56,24 +56,15 @@ const SectionTwoGIF = () => {
     setTimeout(() => {
       setScrollSrc("images/Section2/Scroll/ScrollOpenContent.png");
       setScrollOpen(true);
-    }, 900);
+    }, 1000);
   }
-
   console.log(topPosition, "topPosition");
-
-  // useEffect(() => {
-  //   if (scrollSrc === "images/Section2/Scroll/ScrollClosed.png") {
-  //     setTopPosition("18%");
-  //   } else {
-  //     setTopPosition("48%");
-  //   }
-  // }, [scrollSrc]);
   function handleClickScrollClose(): void {
     setScrollSrc("images/Section2/Scroll/ScrollClosing.gif");
     setTimeout(() => {
       setScrollSrc("images/Section2/Scroll/ScrollClosed.png");
       setScrollOpen(false);
-    }, 950);
+    }, 1050);
   }
 
   //latter
@@ -134,15 +125,9 @@ const SectionTwoGIF = () => {
         width={"40%"}
         style={{
           position: "absolute",
-          // background: "red",
-          // top:
-          //   scrollSrc === "images/Section2/Scroll/ScrollClosed.png"
-          //     ? "18%"
-          //     : "48%",
-          // top: topPosition,
+
           top: "3%",
           left: "50%",
-          // transform: "translate(-50%, -50%)",
 
           cursor: "pointer",
           zIndex: 2,
