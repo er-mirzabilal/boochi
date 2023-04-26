@@ -15,8 +15,6 @@ const Exploror = () => {
       <Box
         sx={{
           display: showSection ? "none" : "block",
-          // opacity: showSection ? 1 : 0,
-          // transition: "opacity 0.5s ease-in-out",
         }}
       >
         <Section showSection={false} setShowSection={setShowSection} />
@@ -38,8 +36,6 @@ const Exploror = () => {
           <SectionTwoGIF />
           <Box
             sx={{
-              // position: "absolute",
-              // top: "75%",
               position: "fixed",
               top: {
                 lg: "80%",
@@ -49,7 +45,6 @@ const Exploror = () => {
                 miniMobile: "25%",
               },
               left: "3%",
-              // width: { md: "20vw", sm: "15vw", miniMobile: "13vw" },
               width: "20vw",
               paddingBottom: 2,
               zIndex: 4,

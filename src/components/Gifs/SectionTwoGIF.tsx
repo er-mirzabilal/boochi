@@ -1,19 +1,8 @@
-import { Box } from "@mui/material";
 import { useRef, useState } from "react";
 
-const SectionTwoGIF = (props: any) => {
-  const [isHovered, setIsHovered] = useState(false);
-
-  const handleMouseOver = () => {
-    setIsHovered(true);
-  };
-
-  const handleMouseOut = () => {
-    setIsHovered(false);
-  };
+const SectionTwoGIF = () => {
   const [src, setSrc] = useState<string>(
     "/images/Animations/kingSkype.jpeg"
-    // "/images/Animations/king.png"
   );
   const [tempSrc, setTempSrc] = useState<string>("");
 
@@ -67,7 +56,6 @@ const SectionTwoGIF = (props: any) => {
       setScrollSrc("images/Section2/Scroll/ScrollOpenContent.png");
       setScrollOpen(true);
     }, 900);
-    setIsHovered(false);
   }
 
   function handleClickScrollClose(): void {
@@ -76,7 +64,6 @@ const SectionTwoGIF = (props: any) => {
       setScrollSrc("images/Section2/Scroll/ScrollClosed.png");
       setScrollOpen(false);
     }, 950);
-    setIsHovered(false);
   }
 
   //latter
@@ -138,7 +125,7 @@ const SectionTwoGIF = (props: any) => {
         style={{
           position: "absolute",
           // background: "red",
-          top: "48%",
+          top: "18%",
           left: "70%",
           transform: "translate(-50%, -50%)",
           cursor: "pointer",

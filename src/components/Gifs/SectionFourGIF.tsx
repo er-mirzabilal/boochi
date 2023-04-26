@@ -2,6 +2,7 @@ import { Box } from "@mui/material";
 import { useEffect, useRef, useState } from "react";
 import HoveringText from "../HoverText";
 import "animate.css";
+import Link from "next/link";
 
 const SectionFourGIF = () => {
   // for ClickAblepanda
@@ -32,16 +33,6 @@ const SectionFourGIF = () => {
       setTempSrcWorker("");
     }, 2500);
   }
-
-  // const [boxRef, isBoxVisible] = useOnScreen({
-  //   rootMargin: "-100px 0px",
-  //   threshold: 0.5,
-  // });
-
-  // const boxAnimationClass = isBoxVisible
-  //   ? "animate__animated animate__fadeInBottomRight"
-
-  //   : "";
 
   const text1 = useRef<HTMLDivElement>(null);
 
@@ -173,7 +164,6 @@ const SectionFourGIF = () => {
       </a>
 
       <Box
-        // className="animate__animated animate__fadeInBottomRight"
         ref={text1}
         className="box"
         sx={{
@@ -187,24 +177,24 @@ const SectionFourGIF = () => {
       >
         <HoveringText text={"/images/Section4/Section4Text1.png"} />
       </Box>
-
+      <Link href={"https://docs.ordinals.com"} target="_blank">
+        <Box
+          ref={text2}
+          className="box"
+          sx={{
+            position: "absolute",
+            top: "23.5%",
+            left: "50%",
+            transform: "translate(-50%, -50%)",
+            width: "33%",
+            zIndex: 2,
+            cursor: "pointer",
+          }}
+        >
+          <HoveringText text={"/images/Section4/Section4Text2.png"} />
+        </Box>
+      </Link>
       <Box
-        ref={text2}
-        className="box"
-        sx={{
-          position: "absolute",
-          top: "23.5%",
-          left: "50%",
-          transform: "translate(-50%, -50%)",
-          width: "33%",
-          zIndex: 2,
-        }}
-      >
-        <HoveringText text={"/images/Section4/Section4Text2.png"} />
-      </Box>
-
-      <Box
-        // className="animate__animated animate__fadeInBottomRight"
         ref={text3}
         className="box"
         sx={{
