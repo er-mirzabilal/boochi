@@ -5,11 +5,9 @@ import SectionFourGIF from "./Gifs/SectionFourGIF";
 import SectionThreeGIF from "./Gifs/SectionThreeGIF";
 import SectionTwoGIF from "./Gifs/SectionTwoGIF";
 import Music from "./Gifs/music";
-
 const Exploror = () => {
   const [showSection, setShowSection] = useState(false);
   const [musicBox, setMusicBox] = useState(true);
-
   return (
     <>
       <Box
@@ -19,13 +17,12 @@ const Exploror = () => {
       >
         <Section showSection={false} setShowSection={setShowSection} />
       </Box>
-
       <Box
         sx={{
           position: "relative",
           display: showSection ? "block" : "none",
           transition: "opacity 3.2s ease-in-out",
-          
+        
         }}
       >
         <Box

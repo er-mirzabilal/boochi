@@ -4,6 +4,7 @@ import { Box } from "@mui/material";
 import React from "react";
 import "animate.css";
 import Music from "./Gifs/music";
+import Link from "next/link";
 const Bitcoin = () => {
   const [musicBox, setMusicBox] = useState(true);
 
@@ -22,6 +23,7 @@ const Bitcoin = () => {
           src="/images/Skype_Picture_2023_04_20T17_31_48_268Z.jpeg"
           alt="My image"
           style={{ width: "100vw", filter: "blur(4px)" }}
+          loading="lazy"
         />
 
         <img
@@ -35,8 +37,9 @@ const Bitcoin = () => {
             left: "35%",
             transform: "translate(-50%, -50%)",
           }}
+          loading="lazy"
         />
-        <a href="/explore">
+        <Link href="/explore">
           <Box
             sx={{
               position: "absolute",
@@ -57,9 +60,10 @@ const Bitcoin = () => {
               src="/images/B/B/Enter the Kingdom.png"
               alt="My image"
               width={"98%"}
+              loading="lazy"
             />
           </Box>
-        </a>
+        </Link>
         {/* new  */}
         <Box sx={{ position: "absolute", top: "43%", left: "30%" }}>
           <Box
@@ -73,12 +77,6 @@ const Bitcoin = () => {
           >
             <Box
               sx={{
-                // position: "absolute",
-                // cursor: "pointer",
-                // transition: "transform 0.3s ease-in",
-
-                // top: "40%",
-                // background: "red",
                 float: "right",
                 left: "33%",
                 ":hover": {
@@ -86,24 +84,20 @@ const Bitcoin = () => {
                 },
               }}
             >
-              <a href="https://www.twitter.com/bitcoinboos" target="_blank">
+              <Link href="https://www.twitter.com/bitcoinboos" target="_blank">
                 <img
                   className="animate__animated animate__fadeInBottomRight"
                   src="/images/B/B/Twitter.png"
                   alt="My image"
                   width={"90%"}
+                  loading="lazy"
                 />
-              </a>
+              </Link>
             </Box>
             <Box sx={{}}>
               <Box
                 sx={{
                   width: "fit-content",
-                  // position: "absolute",
-
-                  // width: "20%",
-                  // top: "44%",
-                  // left: "41%",
 
                   cursor: "pointer",
                   transition: "transform 0.3s ease-in",
@@ -118,7 +112,7 @@ const Bitcoin = () => {
                   },
                 }}
               >
-                <a
+                <Link
                   href="https://bitcoinboos.elementor.cloud/gallery/"
                   target="_blank"
                 >
@@ -132,7 +126,7 @@ const Bitcoin = () => {
                       marginLeft: "2.5%",
                     }}
                   />
-                </a>
+                </Link>
               </Box>
             </Box>
 
@@ -141,23 +135,23 @@ const Bitcoin = () => {
                 cursor: "pointer",
                 float: "left",
                 transition: "transform 0.3s ease-in",
-                // position: "absolute",
-                // background: "green",
-                // top: "40%",
-                // left: "59.9%",
+
                 ":hover": {
                   animation: "shake 1s",
                 },
               }}
             >
-              <a href="https://discord.com/invite/bitcoinboos" target="_blank">
+              <Link
+                href="https://discord.com/invite/bitcoinboos"
+                target="_blank"
+              >
                 <img
                   className="animate__animated animate__fadeInBottomRight"
                   src="/images/B/B/Discord01.png"
                   alt="My image"
                   width={"90%"}
                 />
-              </a>
+              </Link>
             </Box>
           </Box>
         </Box>

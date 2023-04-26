@@ -50,6 +50,7 @@ export const Section = (props: any) => {
 
             // height: "100vh",
           }}
+          loading="lazy"
         />
       </Box>
       <Box
@@ -64,6 +65,7 @@ export const Section = (props: any) => {
             width: "100vw",
             // height: "100vh",
           }}
+          loading="lazy"
         />
       </Box>
 
@@ -76,6 +78,7 @@ export const Section = (props: any) => {
           src="images/Section1/SkyLight.png"
           alt="My image"
           style={{ width: "100vw" }}
+          loading="lazy"
         />
         <SectionOneGIF
           showSection={props.showSection}
