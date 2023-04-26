@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 
 const SectionTwoGIF = () => {
+  const [topPosition, setTopPosition] = useState("18%");
   const [src, setSrc] = useState<string>("/images/Animations/kingSkype.jpeg");
   const [tempSrc, setTempSrc] = useState<string>("");
 
@@ -44,7 +45,6 @@ const SectionTwoGIF = () => {
   }
 
   const [scrollOpen, setScrollOpen] = useState(false);
-  const [topPosition, setTopPosition] = useState("18%");
 
   const [scrollSrc, setScrollSrc] = useState(
     "images/Section2/Scroll/ScrollClosed.png"
@@ -131,7 +131,7 @@ const SectionTwoGIF = () => {
         width={"40%"}
         style={{
           position: "absolute",
-          // background: "red",
+          background: "red",
           // top:
           //   scrollSrc === "images/Section2/Scroll/ScrollClosed.png"
           //     ? "18%"
