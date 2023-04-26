@@ -42,7 +42,7 @@ const Exploror = () => {
             style={{ width: "100vw" }}
           />
           <SectionTwoGIF />
-          {/* <Box
+          <Box
             sx={{
               position: "fixed",
               top: {
@@ -63,24 +63,24 @@ const Exploror = () => {
               musicBox={musicBox}
               src={"/images/Music/booBATTLE.wav"}
             />
-          </Box> */}
+          </Box>
         </Box>
-        {/* <Box sx={{ position: "relative", marginTop: -1 }}>
+        <Box sx={{ position: "relative", marginTop: -1 }}>
           <img
             src="/images/Section3/Section3.gif"
             alt="My image"
             style={{ width: "100vw" }}
           />
           <SectionThreeGIF />
-        </Box> */}
-        {/* <Box sx={{ position: "absolute", marginTop: -1 }}>
+        </Box>
+        <Box sx={{ position: "absolute", marginTop: -1 }}>
           <img
             src="/images/Section4/Section4.gif"
             alt="My image"
             style={{ width: "100vw" }}
           />
           <SectionFourGIF />
-        </Box> */}
+        </Box>
       </Box>
     </>
   );
