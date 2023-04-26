@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const SectionTwoGIF = () => {
   const [src, setSrc] = useState<string>("/images/Animations/kingSkype.jpeg");
@@ -44,24 +44,27 @@ const SectionTwoGIF = () => {
   }
 
   const [scrollOpen, setScrollOpen] = useState(false);
+  const [topPosition, setTopPosition] = useState("18%");
+
   const [scrollSrc, setScrollSrc] = useState(
     "images/Section2/Scroll/ScrollClosed.png"
   );
-
+  console.log(scrollSrc, "scrollSrcscrollSrc");
   function handleClickScroll(): void {
     setScrollSrc("images/Section2/Scroll/ScrollOpening.gif");
     setTimeout(() => {
       setScrollSrc("images/Section2/Scroll/ScrollOpenContent.png");
       setScrollOpen(true);
-      // setTimeout(() => {
-      //   const image = document.querySelector(".scroll-open-image");
-      //   if (image) {
-      //     image.classList.add("visible");
-      //   }
-      // }, 100);
     }, 900);
   }
 
+  useEffect(() => {
+    if (scrollSrc === "images/Section2/Scroll/ScrollClosed.png") {
+      setTopPosition("18%");
+    } else {
+      setTopPosition("48%");
+    }
+  }, [scrollSrc]);
   function handleClickScrollClose(): void {
     setScrollSrc("images/Section2/Scroll/ScrollClosing.gif");
     setTimeout(() => {
@@ -123,23 +126,19 @@ const SectionTwoGIF = () => {
 
       <img
         src={scrollSrc}
-        // className={`scroll-image ${scrollOpen ? "scroll-open-image" : ""}`}
         onClick={scrollOpen ? handleClickScrollClose : handleClickScroll}
         alt="My GIF"
         width={"40%"}
         style={{
           position: "absolute",
           // background: "red",
-          top:
-            scrollSrc === "images/Section2/Scroll/ScrollClosed.png"
-              ? "18%"
-              : "48%",
+          // top:
+          //   scrollSrc === "images/Section2/Scroll/ScrollClosed.png"
+          //     ? "18%"
+          //     : "48%",
+          top: topPosition,
           left: "70%",
           transform: "translate(-50%, -50%)",
-          // opacity:
-          //   scrollSrc === "images/Section2/Scroll/ScrollOpenContent.png"
-          //     ? 1
-          //     : 2,
           transition: "opacity 1.2s ease-in-out",
           cursor: "pointer",
           zIndex: 2,
@@ -149,7 +148,10 @@ const SectionTwoGIF = () => {
               : "",
         }}
         onMouseEnter={(e) => {
-          e.currentTarget.style.animation = "scrollShake 1.5s";
+          e.currentTarget.style.animation =
+            scrollSrc === "images/Section2/Scroll/ScrollClosed.png"
+              ? "scrollShake 1.5s"
+              : "";
         }}
         onMouseLeave={(e) => {
           e.currentTarget.style.animation = "";
