@@ -146,7 +146,7 @@ const SectionFourGIF = () => {
         }}
         onClick={handleClickWorker}
       />
-      <a href="/">
+      <Link href="/">
         <img
           src="/images/Animations/exit.jpeg"
           alt="My image"
@@ -161,7 +161,7 @@ const SectionFourGIF = () => {
             zIndex: 2,
           }}
         />
-      </a>
+      </Link>
 
       <Box
         ref={text1}
