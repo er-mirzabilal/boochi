@@ -131,10 +131,10 @@ const SectionTwoGIF = () => {
 
           cursor: "pointer",
           zIndex: 2,
-          animation:
-            scrollSrc === "images/Section2/Scroll/ScrollClosed.png"
-              ? "scrollShake 1.5s"
-              : "",
+          // animation:
+          //   scrollSrc === "images/Section2/Scroll/ScrollClosed.png"
+          //     ? "scrollShake 1.5s"
+          //     : "",
         }}
         onMouseEnter={(e) => {
           e.currentTarget.style.animation =
