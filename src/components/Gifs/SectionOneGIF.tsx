@@ -1,10 +1,9 @@
 import { Box } from "@mui/material";
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import HoveringText from "../HoverText";
 import Music from "./music";
 
 export const Section = (props: any) => {
-  const [play, setPlay] = useState(false);
   const [musicBox, setMusicBox] = useState(true);
 
   return (
@@ -19,7 +18,6 @@ export const Section = (props: any) => {
         onClick={() => props.setShowSection(true)}
         sx={{
           position: "absolute",
-          // background: "red",
           width: "42%",
           height: {
             xl: "45vh",
@@ -29,11 +27,9 @@ export const Section = (props: any) => {
             xs: "12vh",
             miniMobile: "10vh",
           },
-          // height: "40%",
           zIndex: 3,
           left: "30%",
           top: { lg: 60, md: 40, sm: 30, xs: 22, miniMobile: 18 },
-          // top: "20%",
           cursor: "pointer",
         }}
       ></Box>
@@ -47,8 +43,6 @@ export const Section = (props: any) => {
           alt="My image"
           style={{
             width: "100vw",
-
-            // height: "100vh",
           }}
           loading="lazy"
         />
@@ -63,7 +57,6 @@ export const Section = (props: any) => {
           alt="My image"
           style={{
             width: "100vw",
-            // height: "100vh",
           }}
           loading="lazy"
         />
@@ -87,8 +80,6 @@ export const Section = (props: any) => {
 
         <Box
           sx={{
-            // position: "absolute",
-            // top: "75%",
             position: "fixed",
             top: {
               lg: "80%",
@@ -98,7 +89,6 @@ export const Section = (props: any) => {
               miniMobile: "23%",
             },
             left: "3%",
-            // width: { md: "20vw", sm: "15vw", miniMobile: "13vw" },
             width: "20vw",
             paddingBottom: 2,
           }}
@@ -142,7 +132,6 @@ const SectionOneGIF = (props: any) => {
           transform: "translate(-50%, -50%)",
           cursor: "pointer",
           zIndex: 2,
-          // background: "red",
         }}
         onClick={handleClick}
       />

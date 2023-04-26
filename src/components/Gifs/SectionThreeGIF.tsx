@@ -30,7 +30,6 @@ const SectionThreeGIF = () => {
           }
         });
       }
-      // { rootMargin: "-25% 0px" }
     );
 
     if (text1.current) {
@@ -118,5 +117,4 @@ const SectionThreeGIF = () => {
     </>
   );
 };
-
 export default SectionThreeGIF;

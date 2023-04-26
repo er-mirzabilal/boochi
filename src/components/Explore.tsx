@@ -22,7 +22,6 @@ const Exploror = () => {
           position: "relative",
           display: showSection ? "block" : "none",
           transition: "opacity 3.2s ease-in-out",
-        
         }}
       >
         <Box

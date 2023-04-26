@@ -1,9 +1,7 @@
-import { Box } from "@mui/material";
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 
 const SectionTwoGIF = () => {
-  const [topPosition, setTopPosition] = useState("18%");
-  const [src, setSrc] = useState<string>("/images/Animations/kingSkype.jpeg");
+  const [src] = useState<string>("/images/Animations/kingSkype.jpeg");
   const [tempSrc, setTempSrc] = useState<string>("");
 
   const gifRef = useRef<HTMLImageElement>(null);
@@ -30,7 +28,7 @@ const SectionTwoGIF = () => {
     }, 800);
   }
   // for ClickAbleKit
-  const [srcKit, setSrcKit] = useState<string>(
+  const [srcKit] = useState<string>(
     "images/Animations/Boo5kitsuneboo_IDLE.gif"
   );
 
@@ -58,7 +56,6 @@ const SectionTwoGIF = () => {
       setScrollOpen(true);
     }, 1000);
   }
-  console.log(topPosition, "topPosition");
   function handleClickScrollClose(): void {
     setScrollSrc("images/Section2/Scroll/ScrollClosing.gif");
     setTimeout(() => {
@@ -125,17 +122,12 @@ const SectionTwoGIF = () => {
         width={"40%"}
         style={{
           position: "absolute",
-
           top: "3%",
           left: "50%",
-
           cursor: "pointer",
           zIndex: 2,
-          // animation:
-          //   scrollSrc === "images/Section2/Scroll/ScrollClosed.png"
-          //     ? "scrollShake 1.5s"
-          //     : "",
         }}
+        loading="lazy"
         onMouseEnter={(e) => {
           e.currentTarget.style.animation =
             scrollSrc === "images/Section2/Scroll/ScrollClosed.png"

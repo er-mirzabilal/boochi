@@ -2,7 +2,7 @@ import { Box } from "@mui/material";
 import React, { useEffect, useRef, useState } from "react";
 
 const Music = (props: any) => {
-  const [play, setPlay] = useState(false);
+  const [play] = useState(false);
 
   const [isPlaying, setIsPlaying] = useState<boolean>(false);
 
@@ -22,8 +22,6 @@ const Music = (props: any) => {
       audio.addEventListener("play", handlePlayPause);
       audio.addEventListener("pause", handlePlayPause);
 
-     
-
       return () => {
         audio.removeEventListener("play", handlePlayPause);
         audio.removeEventListener("pause", handlePlayPause);
@@ -42,7 +40,6 @@ const Music = (props: any) => {
       }
     }
   };
-
 
   const toggleMute = () => {
     const audio = audioRef.current;
@@ -70,7 +67,6 @@ const Music = (props: any) => {
           }}
         >
           <img
-            // onClick={() => setMusicBox(!musicBox)}
             onClick={toggleMute}
             src="/images/Music/MusicButton.png"
             alt="My image"
@@ -84,7 +80,6 @@ const Music = (props: any) => {
             position: "absolute",
             top: "75%",
             left: "3%",
-            // width: { md: "20vw", sm: "15vw", miniMobile: "13vw" },
             width: "25vw",
             paddingBottom: 2,
           }}
@@ -96,11 +91,7 @@ const Music = (props: any) => {
               width={"90%"}
             />
 
-            <audio
-              src={props?.src}
-              ref={audioRef}
-              muted={isMuted}
-            />
+            <audio src={props?.src} ref={audioRef} muted={isMuted} />
 
             <Box
               onClick={togglePlayPause}
@@ -150,8 +141,6 @@ const Music = (props: any) => {
                 top: "8%",
 
                 left: "4%",
-
-                // background: "red",
               }}
             >
               <img

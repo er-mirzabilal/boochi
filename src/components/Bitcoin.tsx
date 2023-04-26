@@ -122,7 +122,6 @@ const Bitcoin = () => {
                     alt="My image"
                     width={"90%"}
                     style={{
-                      //  background: "pink",
                       marginLeft: "2.5%",
                     }}
                   />
