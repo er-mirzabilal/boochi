@@ -10,6 +10,7 @@ const Bitcoin = () => {
 
   return (
     <Box
+      // className="custom-cursor"
       sx={{
         position: "relative",
       }}
@@ -160,11 +161,11 @@ const Bitcoin = () => {
           sx={{
             position: "fixed",
             top: {
-              lg: "80%",
-              md: "50%",
-              sm: "33%",
-              xs: "20%",
-              miniMobile: "23%",
+              lg: "83%",
+              md: "33%",
+              sm: "35%",
+              xs: "21%",
+              miniMobile: "25%",
             },
             left: "3%",
 

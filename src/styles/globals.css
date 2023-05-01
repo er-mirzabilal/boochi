@@ -2,7 +2,33 @@ body {
     margin: 0;
     padding: 0;
     background-color: rgb(46, 50, 73);
+    /* cursor: url('/images/cursor.jpeg'), auto; */
+    cursor: none;
+
+
+
 }
+
+
+
+/* body{
+    cursor: url('/images/cursor.jpeg'), auto;
+
+} */
+
+.custom-cursor {
+    position: fixed;
+    z-index: 9999;
+    pointer-events: none;
+    width: 24px;
+    height: 24px;
+    background-image: url('/images/cursor.jpeg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    transform: translate(-50%, -50%);
+}
+
+
 
 html {
     overflow: scroll;
@@ -16,10 +42,6 @@ html {
     /* Optional: just make scrollbar invisible */
 }
 
-/* Optional: show position indicator in red */
-/* ::-webkit-scrollbar-thumb {
-    background: #FF0000;
-} */
 
 .parallax-container {
     height: 500px;
