@@ -1,3 +1,4 @@
+import { Box } from "@mui/material";
 import { useRef, useState } from "react";
 
 const SectionTwoGIF = () => {
@@ -114,30 +115,31 @@ const SectionTwoGIF = () => {
         }}
         onClick={handleClickKit}
       />
-
-      <img
-        src={scrollSrc}
-        onClick={scrollOpen ? handleClickScrollClose : handleClickScroll}
-        alt="My GIF"
-        width={"40%"}
-        style={{
-          position: "absolute",
-          top: "3%",
-          left: "50%",
-          cursor: "pointer",
-          zIndex: 2,
-        }}
-        loading="lazy"
-        onMouseEnter={(e) => {
-          e.currentTarget.style.animation =
-            scrollSrc === "images/Section2/Scroll/ScrollClosed.png"
-              ? "scrollShake 0.7s"
-              : "";
-        }}
-        onMouseLeave={(e) => {
-          e.currentTarget.style.animation = "";
-        }}
-      />
+      <Box onClick={scrollOpen ? handleClickScrollClose : handleClickScroll}>
+        <img
+          src={scrollSrc}
+          // onClick={scrollOpen ? handleClickScrollClose : handleClickScroll}
+          alt="My GIF"
+          width={"40%"}
+          style={{
+            position: "absolute",
+            top: "3%",
+            left: "50%",
+            cursor: "pointer",
+            zIndex: 2,
+          }}
+          loading="lazy"
+          onMouseEnter={(e) => {
+            e.currentTarget.style.animation =
+              scrollSrc === "images/Section2/Scroll/ScrollClosed.png"
+                ? "scrollShake 0.7s"
+                : "";
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.animation = "";
+          }}
+        />
+      </Box>
     </>
   );
 };
