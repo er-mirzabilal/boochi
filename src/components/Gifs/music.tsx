@@ -62,8 +62,9 @@ const Music = (props: any) => {
             position: "absolute",
             width: "20vw",
             top: "8%",
-            cursor: "pointer",
+            cursor: "none",
             left: "4%",
+           
           }}
         >
           <img
@@ -97,7 +98,7 @@ const Music = (props: any) => {
               onClick={togglePlayPause}
               sx={{
                 position: "absolute",
-                cursor: "pointer",
+                cursor: "none",
                 width: "12vw",
                 display: play ? "none" : "block",
                 top: "15%",
@@ -120,7 +121,7 @@ const Music = (props: any) => {
             <Box
               sx={{
                 position: "absolute",
-                cursor: "pointer",
+                cursor: "none",
                 width: "20vw",
                 top: "8%",
                 zIndex: 2,
@@ -148,7 +149,7 @@ const Music = (props: any) => {
                 src="/images/Music/MusicButton.png"
                 alt="My image"
                 width={"20%"}
-                style={{ cursor: "pointer", zIndex: 2 }}
+                style={{ cursor: "none", zIndex: 2 }}
               />
             </Box>
           </Box>

@@ -125,7 +125,7 @@ const SectionFourGIF = () => {
           left: "23%",
           transform: "translate(-50%, -50%)",
 
-          cursor: "pointer",
+          cursor: "none",
           zIndex: 2,
         }}
         onClick={handleClickPnada}
@@ -141,7 +141,7 @@ const SectionFourGIF = () => {
           left: "50%",
           transform: "translate(-50%, -50%)",
 
-          cursor: "pointer",
+          cursor: "none",
           zIndex: 2,
         }}
         onClick={handleClickWorker}
@@ -157,7 +157,7 @@ const SectionFourGIF = () => {
             left: "95%",
             transform: "translate(-50%, -50%)",
 
-            cursor: "pointer",
+            cursor: "none",
             zIndex: 2,
           }}
         />
@@ -188,7 +188,7 @@ const SectionFourGIF = () => {
             transform: "translate(-50%, -50%)",
             width: "33%",
             zIndex: 2,
-            cursor: "pointer",
+            cursor: "none",
           }}
         >
           <HoveringText text={"/images/Section4/Section4Text2.png"} />

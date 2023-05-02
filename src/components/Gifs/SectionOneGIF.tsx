@@ -30,7 +30,7 @@ export const Section = (props: any) => {
           zIndex: 3,
           left: "30%",
           top: { lg: 60, md: 40, sm: 30, xs: 22, miniMobile: 18 },
-          cursor: "pointer",
+          cursor: "none",
         }}
       ></Box>
       <Box

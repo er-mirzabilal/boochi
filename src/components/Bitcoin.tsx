@@ -38,7 +38,7 @@ const Bitcoin = () => {
             left: "35%",
             transform: "translate(-50%, -50%)",
           }}
-          loading="lazy"
+          loading="eager"
         />
         <Link href="/explore">
           <Box
@@ -49,7 +49,7 @@ const Bitcoin = () => {
               top: "33%",
               left: "38.3%",
 
-              cursor: "pointer",
+              cursor: "none",
 
               ":hover": {
                 animation: "shake 1s",
@@ -85,7 +85,11 @@ const Bitcoin = () => {
                 },
               }}
             >
-              <Link href="https://www.twitter.com/bitcoinboos" target="_blank">
+              <Link
+                href="https://www.twitter.com/bitcoinboos"
+                target="_blank"
+                style={{ cursor: "none" }}
+              >
                 <img
                   className="animate__animated animate__fadeInBottomRight"
                   src="/images/B/B/Twitter.png"
@@ -100,7 +104,7 @@ const Bitcoin = () => {
                 sx={{
                   width: "fit-content",
 
-                  cursor: "pointer",
+                  cursor: "none",
                   transition: "transform 0.3s ease-in",
                   // background: "blue",
                   display: "flex",
@@ -114,6 +118,7 @@ const Bitcoin = () => {
                 }}
               >
                 <Link
+                  style={{ cursor: "none" }}
                   href="https://bitcoinboos.elementor.cloud/gallery/"
                   target="_blank"
                 >
@@ -132,7 +137,7 @@ const Bitcoin = () => {
 
             <Box
               sx={{
-                cursor: "pointer",
+                // cursor: "pointer",
                 float: "left",
                 transition: "transform 0.3s ease-in",
 
@@ -142,6 +147,7 @@ const Bitcoin = () => {
               }}
             >
               <Link
+                style={{ cursor: "none" }}
                 href="https://discord.com/invite/bitcoinboos"
                 target="_blank"
               >

@@ -78,7 +78,7 @@ const SectionThreeGIF = () => {
           left: "50%",
           transform: "translate(-50%, -50%)",
 
-          cursor: "pointer",
+          cursor: "none",
           zIndex: 2,
         }}
         onClick={handleClick}

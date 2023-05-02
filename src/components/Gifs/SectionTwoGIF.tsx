@@ -37,12 +37,35 @@ const SectionTwoGIF = () => {
 
   const gifRefKit = useRef<HTMLImageElement>(null);
 
+  const [timeoutId, setTimeoutId] = useState<NodeJS.Timeout | null>(null);
+  // function handleClickKit(): void {
+  //   setTempSrcKit("images/Animations/Boo5kitsuneboo_CLICKABLE.gif");
+  //   setTimeout(() => {
+  //     setTempSrcKit("");
+  //   }, 2500);
+  // }
+
   function handleClickKit(): void {
     setTempSrcKit("images/Animations/Boo5kitsuneboo_CLICKABLE.gif");
-    setTimeout(() => {
-      setTempSrcKit("");
+
+    if (timeoutId) {
+      clearTimeout(timeoutId);
+    }
+
+    const newTimeoutId = setTimeout(() => {
+      setTempSrcKit("images/Animations/Boo5kitsuneboo_IDLE.gif");
     }, 2500);
+
+    setTimeoutId(newTimeoutId);
   }
+
+  // function handleLoadKit() {
+  //   // Make sure the image is fully loaded before displaying it
+  //   console.log("working for kit image onload");
+  //   if (gifRefKit.current) {
+  //     gifRefKit.current.style.visibility = "visible";
+  //   }
+  // }
 
   const [scrollOpen, setScrollOpen] = useState(false);
 
@@ -51,6 +74,10 @@ const SectionTwoGIF = () => {
   );
 
   function handleClickScroll(): void {
+    // const element = document.getElementById("myid");
+    // if (element) {
+    //   element.scrollIntoView({ behavior: "smooth" });
+    // }
     setScrollSrc("images/Section2/Scroll/ScrollOpening.gif");
     setTimeout(() => {
       setScrollSrc("images/Section2/Scroll/ScrollOpenContent.png");
@@ -58,6 +85,10 @@ const SectionTwoGIF = () => {
     }, 1000);
   }
   function handleClickScrollClose(): void {
+    // const element = document.getElementById("myid");
+    // if (element) {
+    //   element.scrollIntoView({ behavior: "smooth" });
+    // }
     setScrollSrc("images/Section2/Scroll/ScrollClosing.gif");
     setTimeout(() => {
       setScrollSrc("images/Section2/Scroll/ScrollClosed.png");
@@ -80,7 +111,7 @@ const SectionTwoGIF = () => {
           left: "58%",
           transform: "translate(-50%, -50%)",
 
-          cursor: "pointer",
+          cursor: "none",
           zIndex: 2,
         }}
         onClick={handleClick}
@@ -95,7 +126,7 @@ const SectionTwoGIF = () => {
           top: "14%",
           left: "15%",
           transform: "translate(-50%, -50%)",
-          cursor: "pointer",
+          cursor: "none",
           zIndex: 2,
         }}
         onClick={handleClickCat}
@@ -110,12 +141,14 @@ const SectionTwoGIF = () => {
           top: "77.5%",
           left: "31%",
           transform: "translate(-50%, -50%)",
-          cursor: "pointer",
-          zIndex: 2,
+          cursor: "none",
+          zIndex: 5,
+          background: "transparent",
         }}
         onClick={handleClickKit}
       />
-      <Box onClick={scrollOpen ? handleClickScrollClose : handleClickScroll}>
+
+      <div onClick={scrollOpen ? handleClickScrollClose : handleClickScroll}>
         <img
           src={scrollSrc}
           // onClick={scrollOpen ? handleClickScrollClose : handleClickScroll}
@@ -125,10 +158,10 @@ const SectionTwoGIF = () => {
             position: "absolute",
             top: "3%",
             left: "50%",
-            cursor: "pointer",
+            cursor: "none",
             zIndex: 2,
           }}
-          loading="lazy"
+          loading="eager"
           onMouseEnter={(e) => {
             e.currentTarget.style.animation =
               scrollSrc === "images/Section2/Scroll/ScrollClosed.png"
@@ -139,7 +172,7 @@ const SectionTwoGIF = () => {
             e.currentTarget.style.animation = "";
           }}
         />
-      </Box>
+      </div>
     </>
   );
 };
