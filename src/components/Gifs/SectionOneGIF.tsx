@@ -19,11 +19,12 @@ export const Section = (props: any) => {
         sx={{
           position: "absolute",
           width: "42%",
+          // background: "red",
           height: {
             xl: "45vh",
             lg: "35vh",
-            md: "25vh",
-            sm: "14vh",
+            md: "32vh",
+            sm: "28vh",
             xs: "12vh",
             miniMobile: "10vh",
           },
@@ -43,6 +44,8 @@ export const Section = (props: any) => {
           alt="My image"
           style={{
             width: "100vw",
+
+            // cursor: "pointer",
           }}
           loading="lazy"
         />
@@ -79,18 +82,35 @@ export const Section = (props: any) => {
         />
 
         <Box
+          // sx={{
+          //   position: "fixed",
+          //   top: {
+          //     lg: "83%",
+          //     md: "33%",
+          //     sm: "35%",
+          //     xs: "21%",
+          //     miniMobile: "25%",
+          //   },
+          //   left: "3%",
+          //   width: "20vw",
+          //   paddingBottom: 2,
+          // }}
           sx={{
             position: "fixed",
-            top: {
-              lg: "83%",
-              md: "33%",
-              sm: "35%",
-              xs: "21%",
-              miniMobile: "25%",
+
+            bottom: {
+              xl: "13%",
+              lg: "10%",
+              md: "12%",
+              sm: "8%",
+              xs: "3%",
+              miniMobile: "5%",
             },
-            left: "3%",
+
+            left: "1%",
             width: "20vw",
             paddingBottom: 2,
+            zIndex: 4,
           }}
         >
           <Music

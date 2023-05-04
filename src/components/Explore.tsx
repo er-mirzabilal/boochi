@@ -40,13 +40,16 @@ const Exploror = () => {
           <Box
             sx={{
               position: "fixed",
-              top: {
-                lg: "83%",
-                md: "33%",
-                sm: "35%",
-                xs: "21%",
-                miniMobile: "25%",
+
+              bottom: {
+                xl: "13%",
+                lg: "10%",
+                md: "5%",
+                sm: "5%",
+                xs: "5%",
+                miniMobile: "5%",
               },
+
               left: "3%",
               width: "20vw",
               paddingBottom: 2,

@@ -28,7 +28,7 @@ const Bitcoin = () => {
         />
 
         <img
-          className="animate__animated animate__bounceInDown"
+          className="animate__animated animate__bounceInDown animate__slow"
           src="/images/B/B/Bitcoin_Boos_Logo.png"
           alt="My image"
           width={"30%"}
@@ -57,7 +57,7 @@ const Bitcoin = () => {
             }}
           >
             <img
-              className="animate__animated animate__fadeInDown"
+              className="animate__animated animate__fadeInDown animate__slow"
               src="/images/B/B/Enter the Kingdom.png"
               alt="My image"
               width={"98%"}
@@ -91,7 +91,7 @@ const Bitcoin = () => {
                 style={{ cursor: "none" }}
               >
                 <img
-                  className="animate__animated animate__fadeInBottomRight"
+                  className="animate__animated animate__fadeInBottomRight animate__slow"
                   src="/images/B/B/Twitter.png"
                   alt="My image"
                   width={"90%"}
@@ -123,7 +123,7 @@ const Bitcoin = () => {
                   target="_blank"
                 >
                   <img
-                    className="animate__animated animate__fadeInDown"
+                    className="animate__animated animate__fadeInDown animate__slow"
                     src="/images/B/B/Gallery.png"
                     alt="My image"
                     width={"90%"}
@@ -152,7 +152,7 @@ const Bitcoin = () => {
                 target="_blank"
               >
                 <img
-                  className="animate__animated animate__fadeInBottomRight"
+                  className="animate__animated animate__fadeInBottomRight animate__slow"
                   src="/images/B/B/Discord01.png"
                   alt="My image"
                   width={"90%"}
@@ -164,17 +164,33 @@ const Bitcoin = () => {
         {/* music */}
 
         <Box
+          // sx={{
+          //   position: "fixed",
+          //   top: {
+          //     lg: "83%",
+          //     md: "33%",
+          //     sm: "35%",
+          //     xs: "21%",
+          //     miniMobile: "25%",
+          //   },
+          //   left: "3%",
+
+          //   width: "20vw",
+          //   paddingBottom: 2,
+          // }}
           sx={{
             position: "fixed",
-            top: {
-              lg: "83%",
-              md: "33%",
-              sm: "35%",
-              xs: "21%",
-              miniMobile: "25%",
-            },
-            left: "3%",
 
+            bottom: {
+              xl: "13%",
+              lg: "10%",
+              md: "5%",
+              sm: "5%",
+              xs: "5%",
+              miniMobile: "5%",
+            },
+
+            left: "3%",
             width: "20vw",
             paddingBottom: 2,
           }}

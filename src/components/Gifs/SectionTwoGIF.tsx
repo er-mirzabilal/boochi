@@ -59,36 +59,22 @@ const SectionTwoGIF = () => {
     setTimeoutId(newTimeoutId);
   }
 
-  // function handleLoadKit() {
-  //   // Make sure the image is fully loaded before displaying it
-  //   console.log("working for kit image onload");
-  //   if (gifRefKit.current) {
-  //     gifRefKit.current.style.visibility = "visible";
-  //   }
-  // }
-
   const [scrollOpen, setScrollOpen] = useState(false);
 
   const [scrollSrc, setScrollSrc] = useState(
     "images/Section2/Scroll/ScrollClosed.png"
   );
+  console.log(scrollSrc, "scrollSrcscrollSrc");
 
   function handleClickScroll(): void {
-    // const element = document.getElementById("myid");
-    // if (element) {
-    //   element.scrollIntoView({ behavior: "smooth" });
-    // }
     setScrollSrc("images/Section2/Scroll/ScrollOpening.gif");
     setTimeout(() => {
-      setScrollSrc("images/Section2/Scroll/ScrollOpenContent.png");
+      setScrollSrc("images/Section2/Scroll/ScrollOpen.png");
+
       setScrollOpen(true);
     }, 1000);
   }
   function handleClickScrollClose(): void {
-    // const element = document.getElementById("myid");
-    // if (element) {
-    //   element.scrollIntoView({ behavior: "smooth" });
-    // }
     setScrollSrc("images/Section2/Scroll/ScrollClosing.gif");
     setTimeout(() => {
       setScrollSrc("images/Section2/Scroll/ScrollClosed.png");
@@ -159,7 +145,9 @@ const SectionTwoGIF = () => {
             top: "3%",
             left: "50%",
             cursor: "none",
+            // zIndex: "images/Section2/Scroll/ScrollOpen.png" ? 4 : 2,
             zIndex: 2,
+            // opacity: "images/Section2/Scroll/contentdata1.png" ? 1 : 0.5,
           }}
           loading="eager"
           onMouseEnter={(e) => {
@@ -172,6 +160,24 @@ const SectionTwoGIF = () => {
             e.currentTarget.style.animation = "";
           }}
         />
+
+        {scrollSrc == "images/Section2/Scroll/ScrollOpen.png" && (
+          <img
+            src={"images/Section2/Scroll/contentdata1.png"}
+            // onClick={scrollOpen ? handleClickScrollClose : handleClickScroll}
+            alt="My GIF"
+            width={"40%"}
+            style={{
+              position: "absolute",
+              top: "3%",
+              left: "50%",
+              cursor: "none",
+              // zIndex: "images/Section2/Scroll/ScrollOpen.png" ? 4 : 2,
+              zIndex: 4,
+              // opacity: "images/Section2/Scroll/contentdata1.png" ? 1 : 0.5,
+            }}
+          />
+        )}
       </div>
     </>
   );

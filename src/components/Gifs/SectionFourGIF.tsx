@@ -43,7 +43,8 @@ const SectionFourGIF = () => {
           if (entry.isIntersecting && text1.current) {
             text1.current.classList.add(
               "animate__animated",
-              "animate__backInLeft"
+              "animate__backInLeft",
+              "animate__slow"
             );
             observer.unobserve(entry.target);
           }
@@ -69,7 +70,8 @@ const SectionFourGIF = () => {
           if (entry.isIntersecting && text3.current) {
             text3.current.classList.add(
               "animate__animated",
-              "animate__fadeInBottomRight"
+              "animate__fadeInBottomRight",
+              "animate__slow"
             );
             observer.unobserve(entry.target);
           }
@@ -95,7 +97,8 @@ const SectionFourGIF = () => {
           if (entry.isIntersecting && text2.current) {
             text2.current.classList.add(
               "animate__animated",
-              "animate__backInRight"
+              "animate__backInRight",
+              "animate__slow"
             );
             observer.unobserve(entry.target);
           }

@@ -7,21 +7,25 @@ import { useEffect } from "react";
 
 export default function App({ Component, pageProps }: AppProps) {
   useEffect(() => {
-    const cursor = document.createElement("div");
-    cursor.classList.add("custom-cursor");
-    document.body.appendChild(cursor);
+    if (window.innerWidth > 768) {
+      // Check if viewport width is greater than 768px
 
-    const handleMouseMove = (e: MouseEvent) => {
-      cursor.style.left = `${e.clientX}px`;
-      cursor.style.top = `${e.clientY}px`;
-    };
+      const cursor = document.createElement("div");
+      cursor.classList.add("custom-cursor");
+      document.body.appendChild(cursor);
 
-    document.addEventListener("mousemove", handleMouseMove);
+      const handleMouseMove = (e: MouseEvent) => {
+        cursor.style.left = `${e.clientX}px`;
+        cursor.style.top = `${e.clientY}px`;
+      };
 
-    return () => {
-      document.removeEventListener("mousemove", handleMouseMove);
-      document.body.removeChild(cursor);
-    };
+      document.addEventListener("mousemove", handleMouseMove);
+
+      return () => {
+        document.removeEventListener("mousemove", handleMouseMove);
+        document.body.removeChild(cursor);
+      };
+    }
   }, []);
 
   return (
