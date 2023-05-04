@@ -23,8 +23,8 @@ export const Section = (props: any) => {
           height: {
             xl: "45vh",
             lg: "35vh",
-            md: "32vh",
-            sm: "28vh",
+            md: "38vh",
+            sm: "27vh",
             xs: "12vh",
             miniMobile: "10vh",
           },
