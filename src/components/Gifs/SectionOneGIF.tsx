@@ -23,10 +23,10 @@ export const Section = (props: any) => {
           height: {
             xl: "45vh",
             lg: "35vh",
-            md: "38vh",
-            sm: "27vh",
-            xs: "12vh",
-            miniMobile: "10vh",
+            md: "44vh",
+            sm: "45vh",
+            xs: "16vh",
+            miniMobile: "13vh",
           },
           zIndex: 3,
           left: "30%",
@@ -82,28 +82,24 @@ export const Section = (props: any) => {
         />
 
         <Box
-          // sx={{
-          //   position: "fixed",
-          //   top: {
-          //     lg: "83%",
-          //     md: "33%",
-          //     sm: "35%",
-          //     xs: "21%",
-          //     miniMobile: "25%",
-          //   },
-          //   left: "3%",
-          //   width: "20vw",
-          //   paddingBottom: 2,
-          // }}
           sx={{
             position: "fixed",
+
+            // bottom: {
+            //   xl: "13%",
+            //   lg: "10%",
+            //   md: "12%",
+            //   sm: "8%",
+            //   xs: "3%",
+            //   miniMobile: "5%",
+            // },
 
             bottom: {
               xl: "13%",
               lg: "10%",
               md: "12%",
               sm: "8%",
-              xs: "3%",
+              xs: "5%",
               miniMobile: "5%",
             },
 
@@ -151,7 +147,7 @@ const SectionOneGIF = (props: any) => {
           left: "53.5%",
           transform: "translate(-50%, -50%)",
           cursor: "pointer",
-          zIndex: 2,
+          zIndex: 5,
         }}
         onClick={handleClick}
       />

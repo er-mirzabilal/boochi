@@ -184,8 +184,8 @@ const Bitcoin = () => {
             bottom: {
               xl: "13%",
               lg: "10%",
-              md: "5%",
-              sm: "5%",
+              md: "12%",
+              sm: "8%",
               xs: "5%",
               miniMobile: "5%",
             },
